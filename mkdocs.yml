@@ -1,0 +1,124 @@
+site_name: TCSE Documentation
+site_description: TED Corpus Search Engine - User Guide
+site_author: Yoichiro Hasebe
+site_url: https://yohasebe.github.io/tcse-documentation/
+
+theme:
+  name: material
+  palette:
+    primary: teal
+  features:
+    - navigation.sections
+    - navigation.expand
+    - search.highlight
+    - content.tabs
+
+plugins:
+  - search
+  - i18n:
+      docs_structure: suffix
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: ja
+          name: 日本語
+          build: true
+          nav:
+            - ホーム: index.md
+            - よくある質問: faq.md
+            - 語句の検索:
+              - トランスクリプトを検索: searching-for-words/search-for-words-in-ted-transcripts.md
+              - 対訳を表示: searching-for-words/show-translation.md
+              - 翻訳テキストで検索: searching-for-words/search-in-translation.md
+              - アドバンスト・サーチ: searching-for-words/search-in-advanced-mode.md
+              - 検索クエリ構文: searching-for-words/advanced-search-query-syntax.md
+              - KWIC コンコーダンス: searching-for-words/kwic-concordance-view.md
+              - 固有表現検索: searching-for-words/named-entity-search.md
+              - ビデオタイプフィルタ: searching-for-words/video-type-filter.md
+            - トークの検索:
+              - トーク情報で検索: finding-talks/search-in-talk-information.md
+              - 翻訳テキストで検索: finding-talks/search-in-talk-information-in-translated-language.md
+              - 全トーク一覧: finding-talks/list-all-available-talks.md
+              - 類似トピックのトーク: finding-talks/find-talks-of-similar-topics.md
+            - トーク情報の取得:
+              - 基本情報: obtaining-information-about-talks/find-basic-information-about-a-talk.md
+              - キーワード: obtaining-information-about-talks/show-keywords-of-a-talk.md
+              - 全文表示: obtaining-information-about-talks/show-transcripts-in-full-length.md
+              - セグメント位置: obtaining-information-about-talks/check-location-of-a-segment.md
+              - 拡張セグメント: obtaining-information-about-talks/switch-to-expanded-segment-mode.md
+              - 構文情報: obtaining-information-about-talks/check-syntactic-information.md
+              - 翻訳の表示: obtaining-information-about-talks/show-translation-of-transcripts.md
+              - テキストハイライト: obtaining-information-about-talks/text-highlight.md
+            - ビデオ再生:
+              - セグメントを再生: playing-video/play-a-segment-of-a-talk.md
+              - 翻訳を表示: playing-video/show-translation-on-video.md
+              - フルスクリーン: playing-video/switch-to-fullscreen.md
+              - ランダム再生: playing-video/play-a-randomly-selected-talk.md
+              - ショートカットキー: playing-video/player-functions-and-shortcut-keys.md
+              - セグメント後に一時停止: playing-video/pause-video-after-segment.md
+              - 10秒前から再生: playing-video/start-video-earlier.md
+              - 同期の微調整: playing-video/fine-tune-sync.md
+              - モバイルデバイス: playing-video/play-video-on-mobile-devices.md
+              - フォントサイズ変更: playing-video/change-fontsize.md
+            - 語学学習・教育:
+              - セグメントURL: using-tcse-for-language-learning-and-education/get-unique-url-of-a-segment.md
+              - 再生速度: using-tcse-for-language-learning-and-education/change-play-speed.md
+              - 一時停止して確認: using-tcse-for-language-learning-and-education/using-pause-and-check.md
+              - Nグラム: using-tcse-for-language-learning-and-education/n-grams.md
+              - 構文・熟語: using-tcse-for-language-learning-and-education/constructions.md
+              - コロケーション分析: using-tcse-for-language-learning-and-education/collocation-analysis.md
+
+nav:
+  - Home: index.md
+  - FAQ: faq.md
+  - Searching for Words:
+    - Search in transcripts: searching-for-words/search-for-words-in-ted-transcripts.md
+    - Show translation: searching-for-words/show-translation.md
+    - Search in translation: searching-for-words/search-in-translation.md
+    - Search in advanced mode: searching-for-words/search-in-advanced-mode.md
+    - Advanced search query syntax: searching-for-words/advanced-search-query-syntax.md
+    - KWIC concordance view: searching-for-words/kwic-concordance-view.md
+    - Named entity search: searching-for-words/named-entity-search.md
+    - Video type filter: searching-for-words/video-type-filter.md
+  - Finding Talks:
+    - Search in talk information: finding-talks/search-in-talk-information.md
+    - Search in translated language: finding-talks/search-in-talk-information-in-translated-language.md
+    - List all available talks: finding-talks/list-all-available-talks.md
+    - Find talks of similar topics: finding-talks/find-talks-of-similar-topics.md
+  - Obtaining Information about Talks:
+    - Basic information: obtaining-information-about-talks/find-basic-information-about-a-talk.md
+    - Keywords of a talk: obtaining-information-about-talks/show-keywords-of-a-talk.md
+    - Full-length transcripts: obtaining-information-about-talks/show-transcripts-in-full-length.md
+    - Segment location: obtaining-information-about-talks/check-location-of-a-segment.md
+    - Expanded segment mode: obtaining-information-about-talks/switch-to-expanded-segment-mode.md
+    - Syntactic information: obtaining-information-about-talks/check-syntactic-information.md
+    - Translation of transcripts: obtaining-information-about-talks/show-translation-of-transcripts.md
+    - Text highlight: obtaining-information-about-talks/text-highlight.md
+  - Playing Video:
+    - Play a segment: playing-video/play-a-segment-of-a-talk.md
+    - Show translation on video: playing-video/show-translation-on-video.md
+    - Fullscreen mode: playing-video/switch-to-fullscreen.md
+    - Play random talk: playing-video/play-a-randomly-selected-talk.md
+    - Shortcut keys: playing-video/player-functions-and-shortcut-keys.md
+    - Pause after segment: playing-video/pause-video-after-segment.md
+    - Start video earlier: playing-video/start-video-earlier.md
+    - Fine-tune sync: playing-video/fine-tune-sync.md
+    - Mobile devices: playing-video/play-video-on-mobile-devices.md
+    - Change font size: playing-video/change-fontsize.md
+  - Language Learning & Education:
+    - Segment URL: using-tcse-for-language-learning-and-education/get-unique-url-of-a-segment.md
+    - Play speed: using-tcse-for-language-learning-and-education/change-play-speed.md
+    - Pause and check: using-tcse-for-language-learning-and-education/using-pause-and-check.md
+    - N-grams: using-tcse-for-language-learning-and-education/n-grams.md
+    - Constructions: using-tcse-for-language-learning-and-education/constructions.md
+    - Collocation analysis: using-tcse-for-language-learning-and-education/collocation-analysis.md
+
+markdown_extensions:
+  - tables
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.details
+  - attr_list
