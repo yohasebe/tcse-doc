@@ -7,6 +7,4 @@
 3. **Search Talk Info** にチェックを入れる
 4. **SEARCH** をクリックする
 
-![入力パネル](images/03.png)
-
 ![検索結果の例](images/04.png)

@@ -24,7 +24,7 @@ Each row also includes icons for viewing the segment in context and playing the 
 
 ## Compact display
 
-For advanced searches or queries with three or more words, keywords are shown in a compact format with a placeholder marker (`···`). Hover over the marker to see the full context, or click it for details.
+When the search query contains four or more words, or when the matched keyword spans four or more words, the keyword column shows a compact placeholder marker (`···`) instead of the full keyword text. Hover over the marker to see the matched keyword, or click it to open the segment detail view.
 
 ## Tips
 

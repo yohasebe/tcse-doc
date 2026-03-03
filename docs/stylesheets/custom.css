@@ -1,0 +1,145 @@
+/* TCSE Documentation - Custom theme overrides */
+
+:root {
+  /* Keep default primary for links/accent — use TCSE teal */
+  --md-primary-fg-color: #1b809e;
+  --md-primary-fg-color--light: #76b2c4;
+  --md-primary-fg-color--dark: #15697f;
+  --md-primary-bg-color: #fff;
+  --md-primary-bg-color--light: #f5f6f8;
+
+  /* Accent color for hover states */
+  --md-accent-fg-color: #1b809e;
+}
+
+/* ===== Header: override to TCSE light gray ===== */
+.md-header {
+  background: linear-gradient(180deg, #f5f6f8 0%, #EBECF0 100%) !important;
+  border-bottom: 2px solid #ddd;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  color: #343434;
+}
+
+/* Header text and icons: dark on light background */
+.md-header__title {
+  color: #343434;
+}
+
+.md-header .md-header__button {
+  color: #555;
+}
+
+.md-header .md-header__button:hover {
+  color: #343434;
+}
+
+/* Logo icon size */
+.md-header__button.md-logo img {
+  height: 1.4rem;
+}
+
+/* Site name: "TCSE" in red, "Documentation" in dark gray */
+.md-header__topic .md-ellipsis {
+  font-weight: bold;
+  color: #343434 !important;
+}
+
+.md-header__topic .md-ellipsis .tcse-brand-red {
+  color: red !important;
+  font-weight: bold;
+}
+
+.md-header__topic .md-ellipsis .tcse-brand-dark {
+  color: #343434 !important;
+  font-weight: bold;
+}
+
+/* ===== Search bar: subtle on light header ===== */
+.md-search__form {
+  background-color: rgba(0, 0, 0, 0.04) !important;
+  border: 1px solid #ccc !important;
+  border-radius: 4px !important;
+}
+
+.md-search__form:hover {
+  background-color: rgba(0, 0, 0, 0.06) !important;
+}
+
+.md-search__input {
+  color: #343434 !important;
+}
+
+.md-search__input::placeholder {
+  color: #999 !important;
+}
+
+/* Search icon color on light header */
+.md-search__icon {
+  color: #777 !important;
+}
+
+/* ===== Tabs bar (if visible) ===== */
+.md-tabs {
+  background-color: #e2e3e8;
+  color: #343434;
+}
+
+.md-tabs__link {
+  color: #555;
+}
+
+.md-tabs__link--active,
+.md-tabs__link:hover {
+  color: #343434;
+}
+
+/* ===== Sidebar scrollbar: subtle ===== */
+.md-sidebar__scrollwrap::-webkit-scrollbar {
+  width: 4px !important;
+}
+
+.md-sidebar__scrollwrap::-webkit-scrollbar-thumb {
+  background-color: #ccc !important;
+  border-radius: 2px !important;
+}
+
+.md-sidebar__scrollwrap::-webkit-scrollbar-thumb:hover,
+.md-sidebar__scrollwrap::-webkit-scrollbar-thumb:active {
+  background-color: #aaa !important;
+}
+
+.md-sidebar__scrollwrap::-webkit-scrollbar-track {
+  background-color: transparent !important;
+}
+
+.md-sidebar__scrollwrap {
+  scrollbar-color: #ccc transparent !important;
+  scrollbar-width: thin !important;
+}
+
+/* Override all scrollbar accent colors globally */
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #ccc !important;
+  border-radius: 3px;
+}
+
+*::-webkit-scrollbar-thumb:hover,
+*::-webkit-scrollbar-thumb:active {
+  background-color: #aaa !important;
+}
+
+/* ===== Sidebar: section headings stand out ===== */
+.md-nav--primary > .md-nav__list > .md-nav__item--nested > .md-nav__link {
+  color: #1b809e !important;
+  font-weight: 700;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-top: 0.8em;
+  padding-bottom: 0.2em;
+  border-bottom: 1px solid #ddd;
+}

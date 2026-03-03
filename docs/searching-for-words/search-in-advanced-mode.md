@@ -5,8 +5,6 @@
 3. Check **Advanced Search**
 4. Click on **SEARCH**
 
-![Input Panel](images/07.png)
-
 ![Sample Results](images/08.png)
 
 Advanced search supports POS tags, lemmas, dependency relations, morphological features, named entities, wildcards, and more. See the [query syntax reference](advanced-search-query-syntax.md) for details.

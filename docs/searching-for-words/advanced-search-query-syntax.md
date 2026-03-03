@@ -11,8 +11,8 @@ TCSE's advanced search mode supports a rich query syntax for linguistic analysis
 | Surface + POS | `SURFACE{POS}` (no space) | `help{v}`, `help{-v}` |
 | Lemma + POS | `[LEMMA]{POS}` (no space) | `[help]{n}`, `[be]{v}` |
 | Negative POS | `{-POS}` | `help{-v}` (help that is NOT a verb) |
-| Dependency / Tag | `{@DEP}` | `{@nsubj}`, `{@passive}` |
-| Morphological feature | `{@MORPH}` | `{@past}`, `{@modal}` |
+| Dependency / Tag | `{@DEP}` | `{@nsubj}`, `{@auxpass}` |
+| Morphological feature | `{#MORPH}` | `{#past}`, `{#mod}` |
 | Named entity | `%ENTITY` | `%PERSON`, `%ORG`, `%GPE` |
 | Logical OR | `A\|B` | `[news\|paper\|article]` |
 | AND condition (negative) | `A&B` | `-word1&word2` |
@@ -47,13 +47,17 @@ Common POS tags used in queries (case-insensitive):
 
 ## Morphological Features
 
-Use `{@feature}` to search by morphological properties:
+Use `{#feature}` to search by morphological properties (partial matching on the morph annotation):
 
 | Feature | Matches |
 | :--- | :--- |
-| `{@passive}` | Passive voice constructions |
-| `{@past}` | Past tense forms |
-| `{@modal}` | Modal verbs |
+| `{#past}` | Past tense forms (`Tense: Past`) |
+| `{#mod}` | Modal verbs (`VerbType: Mod`) |
+| `{#ger}` | Gerund forms (`VerbForm: Ger`) |
+| `{#plur}` | Plural nouns/pronouns (`Number: Plur`) |
+
+!!! note "Passive voice"
+    spaCy's `en_core_web_lg` model does not annotate passive voice in the morphological features for English. Use dependency labels instead: `{@auxpass}` (passive auxiliary) or `{@nsubjpass}` (passive nominal subject).
 
 ## Named Entity Search
 
@@ -84,5 +88,6 @@ Use `%ENTITY` notation to search for named entities. See [Named Entity Search](n
 | `[give] _ _` | ditransitive "give" with two noun chunks |
 | `['s]` | the literal surface form "'s" |
 | `%PERSON said` | sentences where a named person said something |
-| `{@passive}` | passive voice constructions |
+| `{@auxpass}` | passive auxiliary verbs (*was* built, *been* given) |
 | `{@nsubj} [be]` | nominal subjects followed by forms of "be" |
+| `{#past} {#past}` | two consecutive past tense tokens |

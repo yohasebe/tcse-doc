@@ -7,6 +7,6 @@
 
 ![List-items icon location](images/17.png)
 
-The translated text appears next to the original English transcript.
+The translated text appears below the original English transcript.
 
-![Translated text alongside English transcript](images/18.png)
+![Translated text below English transcript](images/18.png)

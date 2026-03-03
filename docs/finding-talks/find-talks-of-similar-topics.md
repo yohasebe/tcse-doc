@@ -6,6 +6,4 @@ Listed on the lower part of the keywords panel are talks that have similar keywo
 
 ![Keywords icon](images/07.png)
 
-![Sample talk](images/08.png)
-
-![Similar talks](images/09.png)
+![Keywords and similar talks](images/08.png)

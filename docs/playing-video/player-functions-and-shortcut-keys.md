@@ -2,8 +2,6 @@
 
 TCSE's video player supports keyboard shortcuts for efficient navigation and control.
 
-![Player Controls](images/10.png)
-
 **Player buttons and keyboard shortcuts**
 
 | Function | Shortcut Keys | Description |

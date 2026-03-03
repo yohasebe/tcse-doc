@@ -5,13 +5,19 @@ site_url: https://yohasebe.github.io/tcse-documentation/
 
 theme:
   name: material
+  custom_dir: overrides
   palette:
-    primary: teal
+    primary: custom
+  logo: assets/images/favicon.png
+  favicon: assets/images/favicon.ico
   features:
     - navigation.sections
     - navigation.expand
     - search.highlight
     - content.tabs
+
+extra_css:
+  - stylesheets/custom.css
 
 plugins:
   - search
@@ -48,7 +54,7 @@ plugins:
               - 全文表示: obtaining-information-about-talks/show-transcripts-in-full-length.md
               - セグメント位置: obtaining-information-about-talks/check-location-of-a-segment.md
               - 拡張セグメント: obtaining-information-about-talks/switch-to-expanded-segment-mode.md
-              - 構文情報: obtaining-information-about-talks/check-syntactic-information.md
+              - 統語情報: obtaining-information-about-talks/check-syntactic-information.md
               - 翻訳の表示: obtaining-information-about-talks/show-translation-of-transcripts.md
               - テキストハイライト: obtaining-information-about-talks/text-highlight.md
             - ビデオ再生:

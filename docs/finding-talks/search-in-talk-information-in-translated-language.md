@@ -7,6 +7,4 @@ To search in translated text of titles, speaker names, descriptions, and keyword
 3. Check **Search Talk Info**
 4. Click on **SEARCH**
 
-![Input panel](images/03.png)
-
 ![Sample results](images/04.png)

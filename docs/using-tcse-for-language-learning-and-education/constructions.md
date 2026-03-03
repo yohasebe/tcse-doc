@@ -1,8 +1,8 @@
 # Constructions
 
-Click on **Constructions** in the main page of TCSE to switch to Construction mode.
+Click on **Constructions** in the navigation bar to switch to Construction mode.
 
-![Constructions tab on the main page](images/13.png)
+![Constructions page](images/13.png)
 
 **1,101 constructions** (including various kinds of idiomatic expressions, phrasal verbs, grammatical patterns, discourse markers, etc.) have been collected that have multiple usage instances in the TCSE database. Though the procedure of collecting these constructions is not systematic but rather heuristic, the list will be helpful for users who are learners and educators of English.
 
@@ -15,8 +15,6 @@ Constructions are organized into categories. Use the category filter buttons at 
 - **Grammatical**: Grammatical patterns (e.g., "the more ... the more ...")
 - **Discourse**: Discourse markers (e.g., "as a matter of fact")
 - **Other**: Other types of constructions
-
-![List of constructions with category filter](images/08.png)
 
 ## Construction details
 

@@ -1,6 +1,11 @@
 # Check location of a segment
 
-![Sample talk info](images/08.png)
+Each search result row displays position information for the segment on its left side:
 
-- `[1]` indicates the segment number and its relative position (0 being the onset and 1 the outset)
-- `[2]` indicates the time position of the segment and total playing time of the talk
+![Segment location info](images/08.png)
+
+- **Talk ID** (e.g. `172109`): the unique identifier of the talk
+- **Relative position** (e.g. `[0.65]`): position within the talk (0 = beginning, 1 = end)
+- **Total duration** (e.g. `[11:53]`): total playing time of the talk
+- **Segment number** (e.g. `82`): the segment's sequential number within the talk
+- **Time** (e.g. `08:01`): the start time of the segment
