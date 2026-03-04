@@ -1,11 +1,9 @@
 # Show translation of transcripts
 
 1. Select a **Translation** language
-2. Choose a talk and click on the **list-items** icon
+2. Choose a talk and click on the **list-items** icon (the icon with horizontal lines, located next to the play button in each search result row)
 
-![Selecting a talk from search results](images/16.png)
-
-![List-items icon location](images/17.png)
+![Search results with list-items icon](images/16.png)
 
 The translated text appears below the original English transcript.
 

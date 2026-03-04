@@ -16,6 +16,6 @@ TCSEの全トランスクリプトデータは [spaCy](https://spacy.io/) 3.8（
 | **Noun Chunk** | そのトークンが名詞チャンクの一部かどうか |
 | **Frequency** | コーパス内での語の出現頻度 |
 
-![クリック位置](images/12.png)
+![クリック位置](images/12.png){ width="600" }
 
 ![統語情報パネル](images/13.png)

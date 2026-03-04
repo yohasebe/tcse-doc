@@ -4,8 +4,8 @@ TCSE uses an HTML5 video player with HLS.js for streaming, which works on modern
 
 **Portrait mode**
 
-![Portrait view on mobile](images/14.png)
+![Portrait view on mobile](images/14.png){ width="300" }
 
 **Landscape mode**
 
-![Landscape view on mobile](images/15.png)
+![Landscape view on mobile](images/15.png){ width="480" }

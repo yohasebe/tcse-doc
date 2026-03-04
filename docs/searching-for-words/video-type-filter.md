@@ -13,8 +13,7 @@ The number displayed next to each video type indicates how many talks of that ty
 
 ![Video type filter](images/13.png)
 
-## Tips
-
-- By default, all video types are selected
-- Filtering by video type affects all search modes (regular, advanced, talk info)
-- The total number of talks matching your filter is shown in the results
+!!! tip "Tips"
+    - By default, all video types are selected
+    - Filtering by video type affects all search modes (regular, advanced, talk info)
+    - The total number of talks matching your filter is shown in the results

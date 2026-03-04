@@ -1,7 +1,7 @@
 site_name: TCSE Documentation
 site_description: TED Corpus Search Engine - User Guide
 site_author: Yoichiro Hasebe
-site_url: https://yohasebe.github.io/tcse-documentation/
+site_url: https://yohasebe.github.io/tcse-doc/
 
 theme:
   name: material
@@ -42,6 +42,7 @@ plugins:
               - 検索クエリ構文: searching-for-words/advanced-search-query-syntax.md
               - KWIC コンコーダンス: searching-for-words/kwic-concordance-view.md
               - 固有表現検索: searching-for-words/named-entity-search.md
+              - 言語アノテーション リファレンス: searching-for-words/linguistic-reference.md
               - ビデオタイプフィルタ: searching-for-words/video-type-filter.md
             - トークの検索:
               - トーク情報で検索: finding-talks/search-in-talk-information.md
@@ -87,6 +88,7 @@ nav:
     - Advanced search query syntax: searching-for-words/advanced-search-query-syntax.md
     - KWIC concordance view: searching-for-words/kwic-concordance-view.md
     - Named entity search: searching-for-words/named-entity-search.md
+    - Linguistic reference: searching-for-words/linguistic-reference.md
     - Video type filter: searching-for-words/video-type-filter.md
   - Finding Talks:
     - Search in talk information: finding-talks/search-in-talk-information.md

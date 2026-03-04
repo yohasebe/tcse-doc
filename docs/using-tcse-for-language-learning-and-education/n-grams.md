@@ -2,7 +2,7 @@
 
 You can look at n-grams of words in TED Talks. Click on the **N-gram** button on the main page to switch to N-gram mode.
 
-![N-gram tab on the main page](images/06.png)
+![N-gram tab on the main page](images/06.png){ width="600" }
 
 An n-gram is a sequence of words of *n* items. Looking at frequencies of various n-grams, you can find out what linguistic sequences are more entrenched in the language and, possibly, what are less so.
 
@@ -15,17 +15,22 @@ TCSE offers four n-gram sizes:
 - **3-gram**: Three-word sequences (trigrams)
 - **4-gram**: Four-word sequences
 
-Some n-grams are displayed with an **NP** badge, indicating that they represent a noun phrase (chunk) rather than a simple word sequence. This chunk-based n-gram analysis captures multi-word units that function as single grammatical units.
-
 Here is a sample output returned in response to the search key *wait*:
 
 ![Results (partial)](images/07.png)
+
+## Chunk-based n-grams
+
+In the results table, some rows are displayed with a **light blue background**. These represent **noun phrase chunks** — multi-word units that function as a single grammatical unit (e.g., *immune system*, *solar system*). Rows without the light blue background are simple word-level n-grams.
+
+![Chunk-based n-grams highlighted in light blue](images/08.png)
+
+This chunk-based analysis helps you identify meaningful multi-word expressions beyond simple word sequences. Click on any row to search for its instances in the transcript corpus.
 
 ## Collocation analysis
 
 The **Colloc 2** and **Colloc 3** tabs provide collocation analysis for your search term. See [Collocation analysis](collocation-analysis.md) for details.
 
-## Tips
-
-- Click on any n-gram in the results to search for its instances in the transcript corpus
-- N-gram frequencies reflect actual usage patterns in TED Talks
+!!! tip "Tips"
+    - Click on any n-gram in the results to search for its instances in the transcript corpus
+    - N-gram frequencies reflect actual usage patterns in TED Talks

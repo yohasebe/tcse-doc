@@ -4,7 +4,7 @@ Click on `S`, `M`, `L` buttons on the video controller or use corresponding keyb
 
 **Font small (normal viewing mode)**
 
-![Font small in normal viewing mode](images/16.png)
+![Font small in normal viewing mode](images/16.png){ width="600" }
 
 **Font small (fullscreen viewing mode)**
 
@@ -12,7 +12,7 @@ Click on `S`, `M`, `L` buttons on the video controller or use corresponding keyb
 
 **Font medium (normal viewing mode)**
 
-![Font medium in normal viewing mode](images/18.png)
+![Font medium in normal viewing mode](images/18.png){ width="600" }
 
 **Font medium (fullscreen viewing mode)**
 

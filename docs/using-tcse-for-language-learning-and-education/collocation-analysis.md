@@ -26,9 +26,8 @@ You can sort collocation results by different statistical measures:
 
 ![Collocation results sorted by MI score](images/11.png)
 
-## Tips
-
-- MI scores tend to highlight rare but strongly associated pairs
-- t-scores are better for finding common, reliable collocations useful for learners
-- Try different sort options to get different perspectives on word combinations
-- Click on any collocation to search for its instances in the transcript corpus
+!!! tip "Tips"
+    - MI scores tend to highlight rare but strongly associated pairs
+    - t-scores are better for finding common, reliable collocations useful for learners
+    - Try different sort options to get different perspectives on word combinations
+    - Click on any collocation to search for its instances in the transcript corpus

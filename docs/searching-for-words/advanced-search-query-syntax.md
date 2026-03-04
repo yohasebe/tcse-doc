@@ -34,7 +34,7 @@ TCSE's advanced search mode supports a rich query syntax for linguistic analysis
 
 ## POS Tags
 
-Common POS tags used in queries (case-insensitive):
+Common POS tags used in queries (case-insensitive). For the complete list of all POS tags, fine-grained tags, dependency labels, and morphological features, see [Linguistic Reference](linguistic-reference.md).
 
 | Tag | Meaning | Tag | Meaning |
 | :--- | :--- | :--- | :--- |

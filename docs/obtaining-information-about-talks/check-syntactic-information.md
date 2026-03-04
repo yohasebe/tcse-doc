@@ -16,6 +16,6 @@ All transcript data in TCSE is annotated with linguistic analysis using [spaCy](
 | **Noun Chunk** | Whether the token is part of a noun chunk |
 | **Frequency** | Frequency of the word in the corpus |
 
-![Where to click](images/12.png)
+![Where to click](images/12.png){ width="600" }
 
 ![Syntactic information panel](images/13.png)

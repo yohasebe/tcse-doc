@@ -16,8 +16,7 @@ Highlights discourse markers — words and phrases that signal the structure and
 
 ![Text highlight controls and highlighted transcript](images/14.png)
 
-## Tips
-
-- Keywords and discourse markers can be highlighted simultaneously
-- Highlighting is available in both normal and expanded segment modes
-- The highlight colors help distinguish between keywords and discourse markers
+!!! tip "Tips"
+    - Keywords and discourse markers can be highlighted simultaneously
+    - Highlighting is available in both normal and expanded segment modes
+    - The highlight colors help distinguish between keywords and discourse markers
