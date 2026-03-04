@@ -67,7 +67,6 @@ plugins:
               - セグメント後に一時停止: playing-video/pause-video-after-segment.md
               - 10秒前から再生: playing-video/start-video-earlier.md
               - 同期の微調整: playing-video/fine-tune-sync.md
-              - モバイルデバイス: playing-video/play-video-on-mobile-devices.md
               - フォントサイズ変更: playing-video/change-fontsize.md
             - 語学学習・教育:
               - セグメントURL: using-tcse-for-language-learning-and-education/get-unique-url-of-a-segment.md
@@ -113,7 +112,6 @@ nav:
     - Pause after segment: playing-video/pause-video-after-segment.md
     - Start video earlier: playing-video/start-video-earlier.md
     - Fine-tune sync: playing-video/fine-tune-sync.md
-    - Mobile devices: playing-video/play-video-on-mobile-devices.md
     - Change font size: playing-video/change-fontsize.md
   - Language Learning & Education:
     - Segment URL: using-tcse-for-language-learning-and-education/get-unique-url-of-a-segment.md
