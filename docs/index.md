@@ -25,8 +25,7 @@ TCSE is a search engine specializing in exploring transcripts of TED Talks. It h
 ### Construction & Data
 
 - **Construction category filter** — Patterns categorized into phrasal verb, idiom, grammatical, discourse, and other, with filter UI
-- **New patterns added** — Pseudo-cleft, resultative, and other information structure patterns
-- **Database cleanup** — Duplicates and low-frequency patterns removed (1,101 patterns total)
+- **New construction patterns added** — Pseudo-cleft, resultative, and other information structure patterns (1,101 patterns total)
 - **6,419 TED Talks** — Over 1,100 new talks added since v10
 
 ## Features
