@@ -42,8 +42,8 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const BASE_URL = 'http://localhost:8080/tcse';
 const DOCS_DIR = path.join(__dirname, '..', 'docs');
 
-const VIEWPORT_DESKTOP = { width: 1280, height: 900 };
-const VIEWPORT_MOBILE = { width: 375, height: 812 };
+const VIEWPORT_DESKTOP = { width: 1280, height: 900, deviceScaleFactor: 2 };
+const VIEWPORT_MOBILE = { width: 375, height: 812, deviceScaleFactor: 2 };
 
 // Helper: wait for network idle
 const waitForIdle = async (page, timeout = 5000) => {
@@ -518,7 +518,7 @@ const scenarios = {
 
     // 15: Mobile landscape
     console.log('  [15/15] Mobile landscape...');
-    await page.setViewport({ width: 812, height: 375 });
+    await page.setViewport({ width: 812, height: 375, deviceScaleFactor: 2 });
     await goHome(page);
     await save(page, G, '15.png', { fullPage: true });
 
