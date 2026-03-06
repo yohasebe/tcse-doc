@@ -4,17 +4,18 @@ Click on **Constructions** in the navigation bar to switch to Construction mode.
 
 ![Constructions page](images/13.png)
 
-**1,101 constructions** (including various kinds of idiomatic expressions, phrasal verbs, grammatical patterns, discourse markers, etc.) have been collected that have multiple usage instances in the TCSE database. Though the procedure of collecting these constructions is not systematic but rather heuristic, the list will be helpful for users who are learners and educators of English.
+**1,156 constructions** have been collected that have multiple usage instances in the TCSE database. These constructions are organized into six categories based on Construction Grammar (Goldberg 1995, 2006), covering the continuum from fully fixed expressions to partially schematic patterns. The list is designed to be useful for learners and educators of English, as well as for linguistic research.
 
 ## Category filter
 
-Constructions are organized into categories. Use the category filter buttons at the top to show only constructions of a specific type:
+Constructions are organized into six categories. Use the category filter buttons at the top to show only constructions of a specific type:
 
-- **Phrasal verb**: Multi-word verbs (e.g., "give up", "look into")
-- **Idiom**: Idiomatic expressions (e.g., "at the end of the day")
-- **Grammatical**: Grammatical patterns (e.g., "the more ... the more ...")
-- **Discourse**: Discourse markers (e.g., "as a matter of fact")
-- **Other**: Other types of constructions
+- **Collocation**: Verb + preposition and adjective + preposition patterns (e.g., "accuse \_ of", "afraid of")
+- **Discourse**: Discourse markers and connectors (e.g., "as a matter of fact", "as a result")
+- **Grammatical**: Core grammatical patterns (e.g., "the more ... the more ...", "there be", comparative/superlative, passive)
+- **Idiom**: Idiomatic expressions (e.g., "at the end of the day", "each other")
+- **NER Pattern**: Named entity slot constructions — patterns where a specific type of named entity fills a semantic slot (e.g., "in %GPE" for place names, "%PERSON said" for person names). These patterns combine linguistic structure with named entity recognition to reveal how prepositions, verbs, and syntactic structures interact with semantic categories.
+- **Phrasal verb**: Multi-word verbs with particles (e.g., "give up", "look into")
 
 ## Construction details
 
