@@ -70,6 +70,39 @@ Use `%ENTITY` notation to search for named entities. See [Named Entity Search](n
 | `in %GPE` | "in" followed by a geo-political entity |
 | `%DATE` | Date expressions |
 
+## Contractions
+
+TCSE's corpus is tokenized by spaCy, which splits contractions into separate tokens. For example, *I'm* is stored as two tokens: *I* + *'m*. In advanced search, contractions are **automatically split** to match spaCy's tokenization, so you can type them naturally.
+
+| Input | Interpreted as | Matches |
+| :--- | :--- | :--- |
+| `I'm going` | `I 'm going` | *I'm going to ...* |
+| `don't` | `do n't` | *don't, Don't* |
+| `let's` | `let 's` | *let's, Let's* |
+| `Tom's fine` | `Tom 's fine` | *Tom's fine* |
+| `can't [be]` | `ca n't [be]` | *can't be, can't have been* |
+
+To search for **all forms** of a verb including contractions, use lemma notation:
+
+| Input | Matches |
+| :--- | :--- |
+| `I [be]` | *I am, I'm, I was, I were* |
+| `[do] n't` | *don't, doesn't, didn't* |
+| `I [have]` | *I have, I've, I had* |
+| `I [will]` | *I will, I'll* |
+
+To disambiguate *'s* (which can be *be*, *have*, or possessive), add a POS filter:
+
+| Input | Matches |
+| :--- | :--- |
+| `it's` | all uses of *it's* |
+| `it ['s]{aux}` | *it's* = *it is* (be) |
+| `it ['s]{part}` | *its* possessive (*it's* rarely used this way) |
+| `Tom [be]` | *Tom is, Tom's* (be), *Tom was* |
+
+!!! note "Already-split input"
+    If you already type the contraction with a space (e.g., `I 'm`), TCSE will not double-split it. Both `I'm` and `I 'm` produce the same results.
+
 ## Examples
 
 | Example | Possible Matches |
