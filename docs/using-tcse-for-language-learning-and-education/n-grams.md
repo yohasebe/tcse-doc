@@ -30,6 +30,8 @@ When n-gram results are displayed, you will see a set of filter buttons above th
 
 For example, when searching for *wait* in 2-gram mode, clicking **#1** shows n-grams where *wait* comes first (e.g., *wait for*, *wait until*), while **#2** shows n-grams where *wait* comes second (e.g., *can't wait*, *please wait*).
 
+![Position filter buttons and n-gram results](images/14.png)
+
 ## Chunk-based n-grams
 
 In the results table, some rows are displayed with a **light blue background**. These represent **noun phrase chunks** — multi-word units that function as a single grammatical unit (e.g., *immune system*, *solar system*). Rows without the light blue background are simple word-level n-grams.
