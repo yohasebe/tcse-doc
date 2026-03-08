@@ -132,6 +132,53 @@
   background-color: #aaa !important;
 }
 
+/* ===== Sidebar: TCSE launch button ===== */
+.tcse-launch-btn-wrap {
+  padding: 0.4rem 0.8rem 0.6rem;
+}
+
+.tcse-launch-btn {
+  display: inline-block;
+  padding: 5px 16px;
+  background: linear-gradient(180deg, #f5f6f8, #ebecf0);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-decoration: none !important;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  transition: box-shadow 0.15s, border-color 0.15s;
+}
+
+.tcse-launch-btn:hover {
+  border-color: #aaa;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  text-decoration: none !important;
+}
+
+.tcse-launch-red {
+  color: #d32f2f;
+  font-weight: 700;
+}
+
+.tcse-launch-dark {
+  color: #343434;
+  font-weight: 700;
+}
+
+/* ===== Footer navigation: compact & no sidebar overlap ===== */
+.md-footer__link {
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+
+.md-footer__title {
+  margin-bottom: 0.2rem;
+}
+
+.md-sidebar--primary .md-sidebar__scrollwrap {
+  bottom: 3.2rem;
+}
+
 /* ===== Sidebar: section headings stand out ===== */
 .md-nav--primary > .md-nav__list > .md-nav__item--nested > .md-nav__link {
   color: #1b809e !important;
