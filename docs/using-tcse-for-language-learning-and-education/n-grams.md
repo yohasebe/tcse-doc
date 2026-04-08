@@ -1,8 +1,8 @@
 # N-grams
 
-You can look at n-grams of words in TED Talks. Click on the **N-gram** button on the main page to switch to N-gram mode.
+You can look at n-grams of words in TED Talks. Click on the **Collocation** button on the main page to switch to Collocation mode.
 
-![N-gram tab on the main page](images/06.png){ width="600" }
+![Collocation mode on the main page](images/06.png){ width="600" }
 
 An n-gram is a sequence of words of *n* items. Looking at frequencies of various n-grams, you can find out what linguistic sequences are more entrenched in the language and, possibly, what are less so.
 
@@ -40,10 +40,19 @@ In the results table, some rows are displayed with a **light blue background**. 
 
 This chunk-based analysis helps you identify meaningful multi-word expressions beyond simple word sequences. Click on any row to search for its instances in the transcript corpus.
 
+## NER-enhanced n-grams
+
+When you search for a named entity type (e.g., `%PERSON`, `%GPE`, `%ORG`), the n-gram tables display results where actual named entities are replaced with their type labels. For example, searching `%PERSON` in 2-gram mode might show entries like `%PERSON said` or `thank %PERSON`, revealing how different entity types interact with surrounding linguistic structures regardless of the specific entity name.
+
 ## Collocation analysis
 
-The **Colloc 2** and **Colloc 3** tabs provide collocation analysis for your search term. See [Collocation analysis](collocation-analysis.md) for details.
+The **Colloc 2** and **Colloc 3** tabs provide collocation analysis for your search term, with results grouped by lemma for accurate association measures. See [Collocation analysis](collocation-analysis.md) for details.
+
+## Collocation network
+
+The **Network** tab provides an interactive force-directed graph visualization of collocational relationships. See [Collocation Network](collocation-network.md) for details.
 
 !!! tip "Tips"
     - Click on any n-gram in the results to search for its instances in the transcript corpus
     - N-gram frequencies reflect actual usage patterns in TED Talks
+    - The Colloc and Network tabs use lemma-based aggregation to combine inflected forms

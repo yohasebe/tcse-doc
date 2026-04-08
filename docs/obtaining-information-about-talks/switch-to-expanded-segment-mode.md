@@ -2,7 +2,7 @@
 
 An **expanded segment** is composed by concatenating one or more segments so that the resulting unit contains at least one whole sentence. A **normal segment**, on the other hand, can be a fragment of a sentence.
 
-**Expanded segments are used by default** in TCSE v12.0.0, as they provide more natural, complete context for each search result.
+**Expanded segments are used by default**, as they provide more natural, complete context for each search result.
 
 To switch between modes, check or uncheck **Use Expanded Segments** before making a new search.
 

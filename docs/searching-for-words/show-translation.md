@@ -12,8 +12,4 @@
 
 The translated text will appear alongside each English search result.
 
-TCSE supports translations in the following 34 languages:
-
-Arabic, Bulgarian, Burmese, Chinese (Simplified), Chinese (Traditional), Croatian, Czech, Dutch, French, German, Greek, Hebrew, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean, Kurdish (Central), Kurdish (Northern), Persian, Polish, Portuguese, Portuguese (Brazilian), Romanian, Russian, Serbian, Slovak, Spanish, Swedish, Thai, Turkish, Ukrainian, and Vietnamese.
-
-Note that not all talks have translations in every language. The number of available talks varies by language.
+TCSE supports translations in **34 languages**. See the [FAQ](../faq.md#what-are-the-criteria-of-translation-language-choice) for the full list. Note that not all talks have translations in every language — the number of available talks varies by language.

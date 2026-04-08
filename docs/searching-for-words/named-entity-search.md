@@ -12,34 +12,34 @@ TCSE supports searching for named entities recognized by spaCy's NER (Named Enti
 
 ![NER search results](images/12.png)
 
-## NER patterns in N-gram mode
+## NER patterns in Collocation mode
 
-You can also search for NER patterns in the **N-gram** mode. For example, searching `%PERSON` in 1-gram mode shows the total frequency of person entities across the corpus. Searching in 2-gram or higher modes reveals common patterns involving named entities (e.g., `%PERSON said`, `in %GPE`). Clicking on an N-gram result will automatically open the corresponding advanced search.
+You can also search for NER patterns in the **Collocation** mode. For example, searching `%PERSON` in 1-gram mode shows the total frequency of person entities across the corpus. Searching in 2-gram or higher modes reveals common patterns involving named entities (e.g., `%PERSON said`, `in %GPE`). Clicking on an n-gram result will automatically open the corresponding advanced search.
 
 ## Entity types
 
 TCSE recognizes 18 named entity types:
 
-| Entity Type | Description | Count in Corpus |
-| :--- | :--- | ---: |
-| `%CARDINAL` | Numerals that do not fall under another type | 73,912 |
-| `%DATE` | Absolute or relative dates or periods | 72,487 |
-| `%PERSON` | People, including fictional | 59,525 |
-| `%GPE` | Countries, cities, states | 48,806 |
-| `%ORG` | Companies, agencies, institutions, etc. | 47,748 |
-| `%ORDINAL` | "first", "second", etc. | 21,850 |
-| `%NORP` | Nationalities or religious or political groups | 21,830 |
-| `%LOC` | Non-GPE locations, mountain ranges, bodies of water | 14,512 |
-| `%TIME` | Times smaller than a day | 9,389 |
-| `%PERCENT` | Percentage, including "%" | 8,184 |
-| `%QUANTITY` | Measurements, as of weight or distance | 6,854 |
-| `%WORK_OF_ART` | Titles of books, songs, etc. | 6,046 |
-| `%MONEY` | Monetary values, including unit | 5,108 |
-| `%PRODUCT` | Objects, vehicles, foods, etc. (not services) | 3,470 |
-| `%FAC` | Buildings, airports, highways, bridges, etc. | 2,649 |
-| `%EVENT` | Named hurricanes, battles, wars, sports events, etc. | 2,165 |
-| `%LANGUAGE` | Any named language | 1,557 |
-| `%LAW` | Named documents made into laws | 758 |
+| Entity Type | Description |
+| :--- | :--- |
+| `%CARDINAL` | Numerals that do not fall under another type |
+| `%DATE` | Absolute or relative dates or periods |
+| `%PERSON` | People, including fictional |
+| `%GPE` | Countries, cities, states |
+| `%ORG` | Companies, agencies, institutions, etc. |
+| `%ORDINAL` | "first", "second", etc. |
+| `%NORP` | Nationalities or religious or political groups |
+| `%LOC` | Non-GPE locations, mountain ranges, bodies of water |
+| `%TIME` | Times smaller than a day |
+| `%PERCENT` | Percentage, including "%" |
+| `%QUANTITY` | Measurements, as of weight or distance |
+| `%WORK_OF_ART` | Titles of books, songs, etc. |
+| `%MONEY` | Monetary values, including unit |
+| `%PRODUCT` | Objects, vehicles, foods, etc. (not services) |
+| `%FAC` | Buildings, airports, highways, bridges, etc. |
+| `%EVENT` | Named hurricanes, battles, wars, sports events, etc. |
+| `%LANGUAGE` | Any named language |
+| `%LAW` | Named documents made into laws |
 
 ## Examples
 

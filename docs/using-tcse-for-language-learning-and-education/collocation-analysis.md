@@ -4,14 +4,14 @@ TCSE provides collocation analysis to help you discover which words frequently c
 
 ## How to access
 
-1. Click on **N-gram** to switch to N-gram mode
+1. Click on **Collocation** to switch to Collocation mode
 2. Enter a search word
 3. Click on the **Colloc 2** or **Colloc 3** tab
 
 - **Colloc 2**: Shows 2-word collocations (bigrams containing your search term)
 - **Colloc 3**: Shows 3-word collocations (trigrams containing your search term)
 
-![Colloc 2 and Colloc 3 tabs in N-gram mode](images/10.png)
+![Colloc 2 and Colloc 3 tabs in Collocation mode](images/10.png)
 
 ## Sort options
 
@@ -26,8 +26,22 @@ You can sort collocation results by different statistical measures:
 
 ![Collocation results sorted by MI score](images/11.png)
 
+## Lemma-based grouping
+
+Collocation results are **grouped by lemma** (base form). This means that all inflected forms of a word are combined into a single entry. For example, searching for "make" will show:
+
+- "make + mistake" (freq=109) — combining "make a mistake", "makes mistakes", "made a mistake", etc.
+- "make + decision" (freq=218) — combining all forms
+
+This gives a more accurate picture of the true collocational strength between words. Hover over a lemma to see all the surface forms that were aggregated. Click on a row to search for all instances using lemma search syntax.
+
+## Collocation network
+
+For a visual overview of collocational relationships, use the **Network** tab. See [Collocation Network](collocation-network.md) for details.
+
 !!! tip "Tips"
     - MI scores tend to highlight rare but strongly associated pairs
     - t-scores are better for finding common, reliable collocations useful for learners
     - Try different sort options to get different perspectives on word combinations
     - Click on any collocation to search for its instances in the transcript corpus
+    - Hover over a lemma cell to see all surface form variants

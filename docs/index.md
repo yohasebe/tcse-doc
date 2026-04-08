@@ -8,11 +8,11 @@ TCSE is a search engine specializing in exploring transcripts of TED Talks. It h
 
 ## Current Version
 
-- **Version**: 12.0.0
+- **Version**: 12.2.0
 - **Talks**: 6,419 TED Talks
 - **Languages**: 34 translation languages
 - **NLP Engine**: spaCy 3.8 (`en_core_web_lg`)
-- **Last Updated**: February 28, 2026
+- **Last Updated**: March 9, 2026
 
 ## Recent Updates (v11–v12)
 
@@ -25,12 +25,19 @@ TCSE is a search engine specializing in exploring transcripts of TED Talks. It h
 
 - **KWIC concordance view** — Toggle between list and KWIC (Key Word In Context) display modes for linguistic analysis
 - **Named entity (NER) search** — Use `%PERSON`, `%ORG`, `%GPE`, `%DATE`, etc. in Advanced Search to find named entities
-- **Collocation analysis** — MI (Mutual Information) and t-score statistics added to N-gram mode
+- **Collocation analysis** — MI, t-score, and DP statistics with lemma-based grouping in Collocation mode
+- **Collocation network** — Interactive force-directed graph visualization of word co-occurrence relationships
+
+### Collocation & Visualization
+
+- **NER-enhanced n-grams** — Named entities replaced with `%TYPE` labels (e.g., `%PERSON said`, `in %GPE`) for entity-aware frequency analysis
+- **Network zoom slider** — Zoom control (50%–200%) replaces scroll-based zooming for more precise graph navigation
+- **Text highlight default off** — Keywords and discourse markers highlighting is now off by default for a cleaner transcript view
 
 ### Construction & Data
 
-- **Construction category filter** — Patterns categorized into Phrasal Verb, Idiom, Grammatical, Discourse, and Other, with filter UI
-- **New construction patterns added** — Pseudo-cleft, resultative, and other information structure patterns (1,101 patterns total)
+- **Construction category filter** — Patterns categorized into Phrasal Verb, Idiom, Grammatical, Collocation, Discourse, and NER Pattern, with filter UI
+- **1,160 construction patterns** — Including pseudo-cleft, resultative, NER patterns, adjective-subjectivity constructions, and other linguistic structures
 - **6,419 TED Talks** — Over 1,100 new talks added since v10
 
 ## Features
@@ -38,8 +45,8 @@ TCSE is a search engine specializing in exploring transcripts of TED Talks. It h
 - **Full-text search** across all TED Talk transcripts
 - **Advanced linguistic search** with POS tags, lemmas, dependency relations, morphological features, and named entities
 - **KWIC concordance view** for linguistic analysis
-- **N-gram frequency analysis** (1-gram to 4-gram) with collocation statistics
-- **Construction search** for 1,101 grammatical patterns (idioms, phrasal verbs, etc.)
+- **Collocation mode** — N-gram frequency (1-gram to 4-gram), collocation statistics, and network visualization
+- **Construction search** for 1,160 grammatical patterns (idioms, phrasal verbs, etc.)
 - **34 translation languages** with cross-language search
 - **Multilingual UI** — English, Japanese, Chinese, and Korean
 - **HTML5 video player** with segment-level playback and study mode

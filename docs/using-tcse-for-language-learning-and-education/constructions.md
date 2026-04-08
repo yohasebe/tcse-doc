@@ -4,7 +4,7 @@ Click on **Constructions** in the navigation bar to switch to Construction mode.
 
 ![Constructions page](images/13.png)
 
-**1,156 constructions** have been collected that have multiple usage instances in the TCSE database. These constructions are organized into six categories based on Construction Grammar (Goldberg 1995, 2006), covering the continuum from fully fixed expressions to partially schematic patterns. The list is designed to be useful for learners and educators of English, as well as for linguistic research.
+**1,160 constructions** have been collected that have multiple usage instances in the TCSE database. These constructions are organized into six categories based on Construction Grammar (Goldberg 1995, 2006), covering the continuum from fully fixed expressions to partially schematic patterns. The list is designed to be useful for learners and educators of English, as well as for linguistic research.
 
 ## Category filter
 

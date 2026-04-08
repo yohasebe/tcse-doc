@@ -4,7 +4,7 @@ When viewing full-length transcripts, TCSE can highlight important words and phr
 
 ## Highlight modes
 
-Click the highlight buttons at the top of the full transcript view to toggle highlighting:
+Highlighting is **off by default** to keep the transcript view clean. Use the checkboxes at the top of the full transcript view to enable highlighting:
 
 ### Keywords
 
@@ -17,6 +17,7 @@ Highlights discourse markers — words and phrases that signal the structure and
 ![Text highlight controls and highlighted transcript](images/14.png)
 
 !!! tip "Tips"
+    - Highlighting is off by default — check the boxes to enable
     - Keywords and discourse markers can be highlighted simultaneously
     - Highlighting is available in both normal and expanded segment modes
     - The highlight colors help distinguish between keywords and discourse markers

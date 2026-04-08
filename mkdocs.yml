@@ -76,6 +76,7 @@ plugins:
               - Nグラム: using-tcse-for-language-learning-and-education/n-grams.md
               - 構文・熟語: using-tcse-for-language-learning-and-education/constructions.md
               - コロケーション分析: using-tcse-for-language-learning-and-education/collocation-analysis.md
+              - コロケーション・ネットワーク: using-tcse-for-language-learning-and-education/collocation-network.md
 
 nav:
   - Home: index.md
@@ -121,6 +122,7 @@ nav:
     - N-grams: using-tcse-for-language-learning-and-education/n-grams.md
     - Constructions: using-tcse-for-language-learning-and-education/constructions.md
     - Collocation analysis: using-tcse-for-language-learning-and-education/collocation-analysis.md
+    - Collocation network: using-tcse-for-language-learning-and-education/collocation-network.md
 
 markdown_extensions:
   - tables
