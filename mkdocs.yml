@@ -45,6 +45,7 @@ plugins:
               - 固有表現検索: searching-for-words/named-entity-search.md
               - 言語アノテーション リファレンス: searching-for-words/linguistic-reference.md
               - ビデオタイプフィルタ: searching-for-words/video-type-filter.md
+              - 検索結果のエクスポート: searching-for-words/export-search-results.md
             - トークの検索:
               - トーク情報で検索: finding-talks/search-in-talk-information.md
               - 翻訳テキストで検索: finding-talks/search-in-talk-information-in-translated-language.md
@@ -91,6 +92,7 @@ nav:
     - Named entity search: searching-for-words/named-entity-search.md
     - Linguistic reference: searching-for-words/linguistic-reference.md
     - Video type filter: searching-for-words/video-type-filter.md
+    - Export search results: searching-for-words/export-search-results.md
   - Finding Talks:
     - Search in talk information: finding-talks/search-in-talk-information.md
     - Search in translated language: finding-talks/search-in-talk-information-in-translated-language.md

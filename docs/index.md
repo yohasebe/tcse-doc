@@ -27,6 +27,7 @@ TCSE is a search engine specializing in exploring transcripts of TED Talks. It h
 - **Named entity (NER) search** — Use `%PERSON`, `%ORG`, `%GPE`, `%DATE`, etc. in Advanced Search to find named entities
 - **Collocation analysis** — MI, t-score, and DP statistics with lemma-based grouping in Collocation mode
 - **Collocation network** — Interactive force-directed graph visualization of word co-occurrence relationships
+- **Export search results** — Download token search results as TSV (ZIP) or JSON with context, linguistic annotations, and translations for research use
 
 ### Collocation & Visualization
 
@@ -51,6 +52,7 @@ TCSE is a search engine specializing in exploring transcripts of TED Talks. It h
 - **Multilingual UI** — English, Japanese, Chinese, and Korean
 - **HTML5 video player** with segment-level playback and study mode
 - **Text highlighting** for keywords (TF-IDF) and discourse markers
+- **Export search results** as TSV or JSON for research and analysis
 
 ## Developer
 
