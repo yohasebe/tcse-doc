@@ -85,8 +85,8 @@ When a translation language is selected, each hit additionally includes:
 
 ## Export limits
 
-- Results up to **1,000 hits**: all results are exported
-- Results over 1,000 hits: a **random sample** of 1,000 hits is exported. The total hit count is recorded in the metadata so you know the full population size.
+- Results up to **500 hits**: all results are exported
+- Results over 500 hits: a **random sample** of 500 hits is exported. The total hit count is recorded in the metadata so you know the full population size.
 - One export per search — results cannot be downloaded in multiple batches
 - A **60-second cooldown** applies between consecutive exports. After an export, the TSV/JSON buttons show a countdown timer and are temporarily disabled. They will automatically become available again when the countdown reaches zero.
 
