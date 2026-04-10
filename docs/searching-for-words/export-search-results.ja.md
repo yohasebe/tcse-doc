@@ -46,10 +46,15 @@
 | talk_title | TED Talkのタイトル |
 | speaker | スピーカー名 |
 | year | 公開年 |
+| video_type | トークの種類（例：「TED Stage Talk」「TEDx Talk」「TED-Ed Original」） |
+| talk_duration | トーク全体の長さ（秒） |
 | talk_url | ted.comのトークURL |
-| match | マッチしたテキスト（HTMLタグ除去済み） |
+| segment_id | セグメントの一意ID（再現性のため） |
+| match | マッチした語句（通常検索では検索語、アドバンスト・サーチでは実際の表層形） |
 | segment_text | マッチを含むセグメントの全文 |
 | segment_position | トーク内の位置（例：「42/187」） |
+| start_time | セグメントの開始時間（秒） |
+| duration | セグメントの持続時間（秒） |
 | context_before_1 | マッチの1つ前のセグメント |
 | context_before_2 | マッチの2つ前のセグメント |
 | context_after_1 | マッチの1つ後のセグメント |

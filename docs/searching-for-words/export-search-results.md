@@ -46,10 +46,15 @@ Each exported hit includes:
 | talk_title | Title of the TED Talk |
 | speaker | Speaker name |
 | year | Year of publication |
+| video_type | Talk type (e.g., "TED Stage Talk", "TEDx Talk", "TED-Ed Original") |
+| talk_duration | Total talk duration in seconds |
 | talk_url | URL to the talk on ted.com |
-| match | Matched text (HTML tags removed) |
+| segment_id | Unique segment ID (for reproducibility) |
+| match | Matched word/phrase (search query for regular search; actual surface form for advanced search) |
 | segment_text | Full segment text containing the match |
 | segment_position | Position in talk (e.g., "42/187") |
+| start_time | Segment start time in seconds |
+| duration | Segment duration in seconds |
 | context_before_1 | One segment before the match |
 | context_before_2 | Two segments before the match |
 | context_after_1 | One segment after the match |
