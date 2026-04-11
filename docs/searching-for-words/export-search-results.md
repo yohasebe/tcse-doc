@@ -9,6 +9,8 @@ You can export token search results as structured data files for use in linguist
 
 1. Perform a token search (regular, advanced, or translation search)
 2. When results are displayed, click **TSV** or **JSON** in the button bar above the results
+3. The **currently visible page** (up to 200 hits) will be downloaded
+4. To export additional pages, navigate with **Prev**/**Next** and click export again
 
 <!-- TODO: Add screenshot after deployment -->
 
@@ -83,19 +85,30 @@ When a translation language is selected, each hit additionally includes:
 | translation_context_after_1 | Translation of one segment after |
 | translation_context_after_2 | Translation of two segments after |
 
-## Export limits
+## Pagination and export scope
 
-- Results up to **1,000 hits**: all results are exported
-- Results over 1,000 hits: a **random sample** of 1,000 hits is exported. The total hit count is recorded in the metadata so you know the full population size.
-- One export per search — results cannot be downloaded in multiple batches
-- A **60-second cooldown** applies between consecutive exports. After an export, the TSV/JSON buttons show a countdown timer and are temporarily disabled. They will automatically become available again when the countdown reaches zero.
+Each export downloads the **currently visible page** of search results (up to 200 hits, matching the regular pagination size). This design has several benefits:
+
+- **Reproducibility**: The same page always produces the same data (when randomize is off). You can share exact data with collaborators.
+- **WYSIWYG**: You export exactly what you see on the screen.
+- **Full corpus access**: To retrieve all hits for a query, navigate through pages (Prev/Next) and export each one. The `page` and `total_pages` fields in the metadata track your progress.
+
+The metadata includes:
+
+- `total_hits`: Total number of hits for the query
+- `exported_count`: Hits in this page (≤ 200)
+- `page`: Current page number
+- `total_pages`: Total number of pages
+- `randomized`: Whether results are in random order (true if the Randomize checkbox is on)
+
+A short **5-second cooldown** applies between consecutive exports to prevent accidental double-clicks. The TSV/JSON buttons show a countdown tooltip on hover and automatically re-enable when the timer reaches zero.
 
 ## License
 
 Exported data includes TED Talk transcripts used under the **Creative Commons BY-NC-ND 4.0** license. The metadata file includes a license notice. Exported data is intended for **research and educational purposes only**.
 
 !!! tip "Tips"
-    - Use random sampling to obtain a statistically representative subset of large result sets
-    - The segment_position field helps analyze where in a talk a pattern tends to occur
+    - To export all results, navigate through pages and export each one. Filenames include the page number (e.g., `tcse_export_20260411_p3.zip`).
+    - The `segment_position` field helps analyze where in a talk a pattern tends to occur
     - Combine Advanced Search annotations (POS, lemma, dep) with context for detailed discourse analysis
     - For comprehensive corpus-level statistics, use the N-gram and Collocation tabs instead of exporting
