@@ -1,7 +1,7 @@
 # Export search results
 
-!!! warning "Coming soon"
-    This feature is currently under development and not yet available on the TCSE website.
+!!! info "Beta feature"
+    This feature is in beta. It is available on the TCSE website, but the interface and data fields may change based on user feedback. Feedback is welcome.
 
 You can export token search results as structured data files for use in linguistic research, statistical analysis, or further processing.
 
