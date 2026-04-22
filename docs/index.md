@@ -54,6 +54,10 @@ TCSE is a search engine specializing in exploring transcripts of TED Talks. It h
 - **Text highlighting** for keywords (TF-IDF) and discourse markers
 - **Export search results** as TSV or JSON for research and analysis
 
+## Related blog posts
+
+For articles about TCSE features, updates, and use cases, see the [TCSE tag on the developer's blog](https://yohasebe.com/tags/tcse/).
+
 ## Developer
 
 TCSE and this documentation are developed and maintained by [Yoichiro Hasebe](https://yohasebe.com) (`yohasebe@gmail.com`)
