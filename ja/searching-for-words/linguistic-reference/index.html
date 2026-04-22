@@ -1,0 +1,3398 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="TED Corpus Search Engine - User Guide">
+      
+      
+        <meta name="author" content="Yoichiro Hasebe">
+      
+      
+        <link rel="canonical" href="https://yohasebe.github.io/tcse-doc/ja/searching-for-words/linguistic-reference/">
+      
+      
+        <link rel="prev" href="../named-entity-search/">
+      
+      
+        <link rel="next" href="../video-type-filter/">
+      
+      
+        
+          <link rel="alternate" href="../../../searching-for-words/linguistic-reference/" hreflang="en">
+        
+          <link rel="alternate" href="./" hreflang="ja">
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>言語アノテーション リファレンス - TCSE Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../../" title="TCSE Documentation" class="md-header__button md-logo" aria-label="TCSE Documentation" data-md-component="logo">
+      
+  <img src="../../../assets/images/favicon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            <span class="tcse-brand-red">TCSE</span> <span class="tcse-brand-dark">Documentation</span>
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              言語アノテーション リファレンス
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="言語切り替え">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../searching-for-words/linguistic-reference/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="ja" class="md-select__link">
+              日本語
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="検索">
+        
+        <button type="reset" class="md-search__icon md-icon" title="クリア" aria-label="クリア" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            検索を初期化
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="TCSE Documentation" class="md-nav__button md-logo" aria-label="TCSE Documentation" data-md-component="logo">
+      
+  <img src="../../../assets/images/favicon.png" alt="logo">
+
+    </a>
+    TCSE Documentation
+  </label>
+  
+  <div class="tcse-launch-btn-wrap">
+    <a href="https://yohasebe.com/tcse" target="_blank" class="tcse-launch-btn">
+      <span class="tcse-launch-red">TCSE</span> <span class="tcse-launch-dark">Search Engine</span>
+    </a>
+  </div>
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ホーム
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    よくある質問
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    語句の検索
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    語句の検索
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../search-for-words-in-ted-transcripts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    トランスクリプトを検索
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../show-translation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    対訳を表示
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../search-in-translation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    翻訳テキストで検索
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../search-in-advanced-mode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    アドバンスト・サーチ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced-search-query-syntax/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    検索クエリ構文
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kwic-concordance-view/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    KWIC コンコーダンス
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../named-entity-search/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    固有表現検索
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    言語アノテーション リファレンス
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    言語アノテーション リファレンス
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#universal-pos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Universal POS タグ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fine-grained-penn-treebank" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fine-Grained タグ（Penn Treebank）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fine-Grained タグ（Penn Treebank）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        名詞
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        動詞
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        形容詞
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        副詞
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        代名詞・限定詞
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        その他
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dep-labels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        依存関係ラベル
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="依存関係ラベル">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        中核項
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        節項
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        修飾語
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        前置詞・格
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        等位接続・接続
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        動詞関連
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        その他
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#morph-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        形態素性
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ner-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        固有表現タイプ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search-syntax-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        検索構文サマリー
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../video-type-filter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ビデオタイプフィルタ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../export-search-results/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    検索結果のエクスポート
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    トークの検索
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    トークの検索
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../finding-talks/search-in-talk-information/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    トーク情報で検索
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../finding-talks/search-in-talk-information-in-translated-language/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    翻訳テキストで検索
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../finding-talks/list-all-available-talks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    全トーク一覧
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../finding-talks/find-talks-of-similar-topics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    類似トピックのトーク
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    トーク情報の取得
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    トーク情報の取得
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../obtaining-information-about-talks/find-basic-information-about-a-talk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基本情報
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../obtaining-information-about-talks/show-keywords-of-a-talk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    キーワード
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../obtaining-information-about-talks/show-transcripts-in-full-length/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    全文表示
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../obtaining-information-about-talks/check-location-of-a-segment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    セグメント位置
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../obtaining-information-about-talks/switch-to-expanded-segment-mode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    拡張セグメント
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../obtaining-information-about-talks/check-syntactic-information/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    統語情報
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../obtaining-information-about-talks/show-translation-of-transcripts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    翻訳の表示
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../obtaining-information-about-talks/text-highlight/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    テキストハイライト
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ビデオ再生
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ビデオ再生
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../playing-video/play-a-segment-of-a-talk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    セグメントを再生
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../playing-video/show-translation-on-video/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    翻訳を表示
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../playing-video/switch-to-fullscreen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    フルスクリーン
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../playing-video/play-a-randomly-selected-talk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ランダム再生
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../playing-video/player-functions-and-shortcut-keys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ショートカットキー
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../playing-video/pause-video-after-segment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    セグメント後に一時停止
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../playing-video/start-video-earlier/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10秒前から再生
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../playing-video/fine-tune-sync/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    同期の微調整
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../playing-video/change-fontsize/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    フォントサイズ変更
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    語学学習・教育
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    語学学習・教育
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../using-tcse-for-language-learning-and-education/get-unique-url-of-a-segment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    セグメントURL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../using-tcse-for-language-learning-and-education/change-play-speed/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    再生速度
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../using-tcse-for-language-learning-and-education/using-pause-and-check/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    一時停止して確認
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../using-tcse-for-language-learning-and-education/n-grams/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nグラム
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../using-tcse-for-language-learning-and-education/constructions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    構文・熟語
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../using-tcse-for-language-learning-and-education/collocation-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    コロケーション分析
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../using-tcse-for-language-learning-and-education/collocation-network/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    コロケーション・ネットワーク
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#universal-pos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Universal POS タグ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fine-grained-penn-treebank" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fine-Grained タグ（Penn Treebank）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fine-Grained タグ（Penn Treebank）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        名詞
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        動詞
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        形容詞
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        副詞
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        代名詞・限定詞
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        その他
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dep-labels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        依存関係ラベル
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="依存関係ラベル">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        中核項
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        節項
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        修飾語
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        前置詞・格
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        等位接続・接続
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        動詞関連
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        その他
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#morph-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        形態素性
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ner-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        固有表現タイプ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search-syntax-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        検索構文サマリー
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">言語アノテーション リファレンス</h1>
+<p>TCSEのすべてのトランスクリプトデータは、<a href="https://spacy.io/">spaCy</a> 3.8（<code>en_core_web_lg</code>）を用いてアノテーションされています。このページでは、TCSEのアドバンスト・サーチで使用されるすべての言語アノテーションカテゴリの完全なリファレンスを提供します。</p>
+<div class="admonition tip">
+<p class="admonition-title">クイックリンク</p>
+<ul>
+<li><a href="#universal-pos">Universal POS タグ</a></li>
+<li><a href="#fine-grained-penn-treebank">Fine-Grained タグ（Penn Treebank）</a></li>
+<li><a href="#dep-labels">依存関係ラベル</a></li>
+<li><a href="#morph-features">形態素性</a></li>
+<li><a href="#ner-types">固有表現タイプ</a></li>
+<li><a href="#search-syntax-summary">検索構文サマリー</a></li>
+</ul>
+</div>
+<hr />
+<h2 id="universal-pos">Universal POS タグ</h2>
+<p><a href="https://universaldependencies.org/u/pos/">Universal Dependencies</a> に基づく粗粒度の品詞カテゴリです。アドバンスト・サーチでは <code>{pos}</code> 記法で使用します（例：<code>help{verb}</code>、<code>[be]{aux}</code>）。</p>
+<p>よく使うタグには<strong>略称エイリアス</strong>が用意されています。たとえば <code>{verb}</code> の代わりに <code>{v}</code> が使えます。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">タグ</th>
+<th style="text-align: left;">品詞</th>
+<th style="text-align: left;">検索記法</th>
+<th style="text-align: left;">エイリアス</th>
+<th style="text-align: left;">種別</th>
+<th style="text-align: left;">例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>ADJ</code></td>
+<td style="text-align: left;">形容詞</td>
+<td style="text-align: left;"><code>{adj}</code></td>
+<td style="text-align: left;"><code>{a}</code>, <code>{j}</code>, <code>{jj}</code></td>
+<td style="text-align: left;">開放類</td>
+<td style="text-align: left;"><em>big, old, green, first</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ADV</code></td>
+<td style="text-align: left;">副詞</td>
+<td style="text-align: left;"><code>{adv}</code></td>
+<td style="text-align: left;"><code>{r}</code>, <code>{rb}</code></td>
+<td style="text-align: left;">開放類</td>
+<td style="text-align: left;"><em>very, well, exactly, tomorrow</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>INTJ</code></td>
+<td style="text-align: left;">間投詞</td>
+<td style="text-align: left;"><code>{intj}</code></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">開放類</td>
+<td style="text-align: left;"><em>hello, ouch, bravo</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>NOUN</code></td>
+<td style="text-align: left;">名詞</td>
+<td style="text-align: left;"><code>{noun}</code></td>
+<td style="text-align: left;"><code>{n}</code>, <code>{nn}</code></td>
+<td style="text-align: left;">開放類</td>
+<td style="text-align: left;"><em>people, time, world, way</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>PROPN</code></td>
+<td style="text-align: left;">固有名詞</td>
+<td style="text-align: left;"><code>{propn}</code></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">開放類</td>
+<td style="text-align: left;"><em>Mary, John, London, NATO</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>VERB</code></td>
+<td style="text-align: left;">動詞</td>
+<td style="text-align: left;"><code>{verb}</code></td>
+<td style="text-align: left;"><code>{v}</code>, <code>{vb}</code></td>
+<td style="text-align: left;">開放類</td>
+<td style="text-align: left;"><em>run, eat, go, think, help</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ADP</code></td>
+<td style="text-align: left;">前置詞</td>
+<td style="text-align: left;"><code>{adp}</code></td>
+<td style="text-align: left;"><code>{p}</code></td>
+<td style="text-align: left;">閉鎖類</td>
+<td style="text-align: left;"><em>in, to, during, of, with</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>AUX</code></td>
+<td style="text-align: left;">助動詞</td>
+<td style="text-align: left;"><code>{aux}</code></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">閉鎖類</td>
+<td style="text-align: left;"><em>has, is, will, should, must</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>CCONJ</code></td>
+<td style="text-align: left;">等位接続詞</td>
+<td style="text-align: left;"><code>{cconj}</code></td>
+<td style="text-align: left;"><code>{c}</code></td>
+<td style="text-align: left;">閉鎖類</td>
+<td style="text-align: left;"><em>and, or, but</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>DET</code></td>
+<td style="text-align: left;">限定詞</td>
+<td style="text-align: left;"><code>{det}</code></td>
+<td style="text-align: left;"><code>{dt}</code></td>
+<td style="text-align: left;">閉鎖類</td>
+<td style="text-align: left;"><em>the, a, this, which, all</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>NUM</code></td>
+<td style="text-align: left;">数詞</td>
+<td style="text-align: left;"><code>{num}</code></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">閉鎖類</td>
+<td style="text-align: left;"><em>one, two, three</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>PART</code></td>
+<td style="text-align: left;">小辞</td>
+<td style="text-align: left;"><code>{part}</code></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">閉鎖類</td>
+<td style="text-align: left;"><em>'s, not, to</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>PRON</code></td>
+<td style="text-align: left;">代名詞</td>
+<td style="text-align: left;"><code>{pron}</code></td>
+<td style="text-align: left;"><code>{pr}</code></td>
+<td style="text-align: left;">閉鎖類</td>
+<td style="text-align: left;"><em>I, it, you, we, they</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>SCONJ</code></td>
+<td style="text-align: left;">従位接続詞</td>
+<td style="text-align: left;"><code>{sconj}</code></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">閉鎖類</td>
+<td style="text-align: left;"><em>that, if, while, because</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>PUNCT</code></td>
+<td style="text-align: left;">句読点</td>
+<td style="text-align: left;"><code>{punct}</code></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">その他</td>
+<td style="text-align: left;"><em>. , ; : ! ?</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>SYM</code></td>
+<td style="text-align: left;">記号</td>
+<td style="text-align: left;"><code>{sym}</code></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">その他</td>
+<td style="text-align: left;"><em>$, %, &sect;</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>X</code></td>
+<td style="text-align: left;">その他</td>
+<td style="text-align: left;"><code>{x}</code></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">その他</td>
+<td style="text-align: left;"><em>外来語、タイプミス</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>SPACE</code></td>
+<td style="text-align: left;">空白</td>
+<td style="text-align: left;"><code>{space}</code></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">その他</td>
+<td style="text-align: left;"><em>空白トークン</em></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="fine-grained-penn-treebank">Fine-Grained タグ（Penn Treebank）</h2>
+<p><a href="https://www.ling.upenn.edu/courses/Fall_2003/ling001/penn_treebank_pos.html">Penn Treebank タグセット</a>に準拠した詳細品詞タグです。<code>{@tag}</code> 記法で検索できます（例：<code>{@VBG}</code> で動名詞・現在分詞）。</p>
+<h3 id="_2">名詞</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">タグ</th>
+<th style="text-align: left;">説明</th>
+<th style="text-align: left;">例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>NN</code></td>
+<td style="text-align: left;">名詞、単数または不可算</td>
+<td style="text-align: left;"><em>dog, music, education</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>NNS</code></td>
+<td style="text-align: left;">名詞、複数</td>
+<td style="text-align: left;"><em>dogs, children, ideas</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>NNP</code></td>
+<td style="text-align: left;">固有名詞、単数</td>
+<td style="text-align: left;"><em>London, Obama, Google</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>NNPS</code></td>
+<td style="text-align: left;">固有名詞、複数</td>
+<td style="text-align: left;"><em>Americans, Alps</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_3">動詞</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">タグ</th>
+<th style="text-align: left;">説明</th>
+<th style="text-align: left;">例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>VB</code></td>
+<td style="text-align: left;">動詞、原形</td>
+<td style="text-align: left;"><em>go, eat, run</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>VBD</code></td>
+<td style="text-align: left;">動詞、過去形</td>
+<td style="text-align: left;"><em>went, ate, ran</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>VBG</code></td>
+<td style="text-align: left;">動詞、動名詞・現在分詞</td>
+<td style="text-align: left;"><em>going, eating, running</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>VBN</code></td>
+<td style="text-align: left;">動詞、過去分詞</td>
+<td style="text-align: left;"><em>gone, eaten, taken</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>VBP</code></td>
+<td style="text-align: left;">動詞、三人称単数以外の現在形</td>
+<td style="text-align: left;"><em>go, eat, run</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>VBZ</code></td>
+<td style="text-align: left;">動詞、三人称単数現在形</td>
+<td style="text-align: left;"><em>goes, eats, runs</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>MD</code></td>
+<td style="text-align: left;">法助動詞</td>
+<td style="text-align: left;"><em>can, could, may, might, will, would, shall, should, must</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_4">形容詞</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">タグ</th>
+<th style="text-align: left;">説明</th>
+<th style="text-align: left;">例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>JJ</code></td>
+<td style="text-align: left;">形容詞</td>
+<td style="text-align: left;"><em>big, green, incomprehensible</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>JJR</code></td>
+<td style="text-align: left;">形容詞、比較級</td>
+<td style="text-align: left;"><em>bigger, better, faster</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>JJS</code></td>
+<td style="text-align: left;">形容詞、最上級</td>
+<td style="text-align: left;"><em>biggest, best, fastest</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>AFX</code></td>
+<td style="text-align: left;">接辞（ハイフン付き形容詞の一部）</td>
+<td style="text-align: left;"><em>例："anti-war" の "anti"</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_5">副詞</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">タグ</th>
+<th style="text-align: left;">説明</th>
+<th style="text-align: left;">例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>RB</code></td>
+<td style="text-align: left;">副詞</td>
+<td style="text-align: left;"><em>very, well, quickly, never</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>RBR</code></td>
+<td style="text-align: left;">副詞、比較級</td>
+<td style="text-align: left;"><em>faster, better, more</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>RBS</code></td>
+<td style="text-align: left;">副詞、最上級</td>
+<td style="text-align: left;"><em>fastest, best, most</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>WRB</code></td>
+<td style="text-align: left;">Wh副詞</td>
+<td style="text-align: left;"><em>where, when, why, how</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_6">代名詞・限定詞</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">タグ</th>
+<th style="text-align: left;">説明</th>
+<th style="text-align: left;">例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>PRP</code></td>
+<td style="text-align: left;">人称代名詞</td>
+<td style="text-align: left;"><em>I, you, he, she, it, we, they</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>PRP$</code></td>
+<td style="text-align: left;">所有代名詞</td>
+<td style="text-align: left;"><em>my, your, his, her, its, our, their</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>WP</code></td>
+<td style="text-align: left;">Wh代名詞</td>
+<td style="text-align: left;"><em>who, what, whom</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>WP$</code></td>
+<td style="text-align: left;">所有Wh代名詞</td>
+<td style="text-align: left;"><em>whose</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>WDT</code></td>
+<td style="text-align: left;">Wh限定詞</td>
+<td style="text-align: left;"><em>which, that, what</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>DT</code></td>
+<td style="text-align: left;">限定詞</td>
+<td style="text-align: left;"><em>the, a, an, this, that, these</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>PDT</code></td>
+<td style="text-align: left;">前限定詞</td>
+<td style="text-align: left;"><em>all, both, half</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>EX</code></td>
+<td style="text-align: left;">存在の <em>there</em></td>
+<td style="text-align: left;"><em>there (is/are)</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_7">その他</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">タグ</th>
+<th style="text-align: left;">説明</th>
+<th style="text-align: left;">例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>IN</code></td>
+<td style="text-align: left;">前置詞または従位接続詞</td>
+<td style="text-align: left;"><em>in, of, by, that, if, because</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>CC</code></td>
+<td style="text-align: left;">等位接続詞</td>
+<td style="text-align: left;"><em>and, or, but, nor, yet</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>CD</code></td>
+<td style="text-align: left;">基数</td>
+<td style="text-align: left;"><em>one, 2, 1,000</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>TO</code></td>
+<td style="text-align: left;">to</td>
+<td style="text-align: left;"><em>to (go), to (the store)</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>POS</code></td>
+<td style="text-align: left;">所有格語尾</td>
+<td style="text-align: left;"><em>'s, '</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>RP</code></td>
+<td style="text-align: left;">小辞</td>
+<td style="text-align: left;"><em>up, off, out, in（句動詞）</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>UH</code></td>
+<td style="text-align: left;">間投詞</td>
+<td style="text-align: left;"><em>oh, well, um, uh</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>FW</code></td>
+<td style="text-align: left;">外来語</td>
+<td style="text-align: left;"><em>de, la, von</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>LS</code></td>
+<td style="text-align: left;">リスト項目マーカー</td>
+<td style="text-align: left;"><em>1., 2., a., b.</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>SYM</code></td>
+<td style="text-align: left;">記号</td>
+<td style="text-align: left;"><em>$, %, +, =</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>HYPH</code></td>
+<td style="text-align: left;">ハイフン</td>
+<td style="text-align: left;"><em>-</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>NFP</code></td>
+<td style="text-align: left;">余分な句読点</td>
+<td style="text-align: left;"><em>..., --</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>XX</code></td>
+<td style="text-align: left;">不明</td>
+<td style="text-align: left;"><em>分析不能なトークン</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ADD</code></td>
+<td style="text-align: left;">メールアドレスまたはURL</td>
+<td style="text-align: left;"><em>user@example.com</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>_SP</code></td>
+<td style="text-align: left;">空白</td>
+<td style="text-align: left;"><em>空白文字</em></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="dep-labels">依存関係ラベル</h2>
+<p>文中の語と語の統語的な依存関係を示すラベルです。<code>{@label}</code> 記法で検索できます（例：<code>{@nsubj}</code> で主語を検索）。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>{@...}</code> 記法は、Fine-Grainedタグと依存関係ラベルの両方を同時に検索します。たとえば <code>{@VBG}</code> は動名詞（タグ）に、<code>{@nsubj}</code> は主語（依存関係）にマッチします。</p>
+</div>
+<h3 id="_8">中核項</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">ラベル</th>
+<th style="text-align: left;">説明</th>
+<th style="text-align: left;">例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>nsubj</code></td>
+<td style="text-align: left;">主語（名詞）</td>
+<td style="text-align: left;"><em><strong>She</strong> runs.</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>nsubjpass</code></td>
+<td style="text-align: left;">主語（受動態）</td>
+<td style="text-align: left;"><em><strong>It</strong> was built.</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>dobj</code></td>
+<td style="text-align: left;">直接目的語</td>
+<td style="text-align: left;"><em>I see </em><em>you</em><em>.</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>dative</code></td>
+<td style="text-align: left;">与格（間接目的語）</td>
+<td style="text-align: left;"><em>Give </em><em>me</em><em> a book.</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>attr</code></td>
+<td style="text-align: left;">属性</td>
+<td style="text-align: left;"><em>She is </em><em>a teacher</em><em>.</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>agent</code></td>
+<td style="text-align: left;">動作主（受動態のby句）</td>
+<td style="text-align: left;"><em>Built </em><em>by engineers</em><em>.</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>expl</code></td>
+<td style="text-align: left;">虚辞</td>
+<td style="text-align: left;"><em><strong>There</strong> is a problem.</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_9">節項</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">ラベル</th>
+<th style="text-align: left;">説明</th>
+<th style="text-align: left;">例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>csubj</code></td>
+<td style="text-align: left;">節主語</td>
+<td style="text-align: left;"><em><strong>What she said</strong> is true.</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>csubjpass</code></td>
+<td style="text-align: left;">節主語（受動態）</td>
+<td style="text-align: left;"><em><strong>That he came</strong> was unexpected.</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ccomp</code></td>
+<td style="text-align: left;">節補語</td>
+<td style="text-align: left;"><em>I think </em><em>he left</em><em>.</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>xcomp</code></td>
+<td style="text-align: left;">開放節補語</td>
+<td style="text-align: left;"><em>I want </em><em>to go</em><em>.</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>acomp</code></td>
+<td style="text-align: left;">形容詞補語</td>
+<td style="text-align: left;"><em>She looks </em><em>happy</em><em>.</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>oprd</code></td>
+<td style="text-align: left;">目的語述語</td>
+<td style="text-align: left;"><em>I consider him </em><em>smart</em><em>.</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_10">修飾語</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">ラベル</th>
+<th style="text-align: left;">説明</th>
+<th style="text-align: left;">例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>amod</code></td>
+<td style="text-align: left;">形容詞修飾語</td>
+<td style="text-align: left;"><em>a </em><em>big</em><em> house</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>advmod</code></td>
+<td style="text-align: left;">副詞修飾語</td>
+<td style="text-align: left;"><em>run </em><em>quickly</em>**</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>nummod</code></td>
+<td style="text-align: left;">数量修飾語</td>
+<td style="text-align: left;"><em><strong>three</strong> cats</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>nmod</code></td>
+<td style="text-align: left;">名詞修飾語</td>
+<td style="text-align: left;"><em>a cup of </em><em>coffee</em>**</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>npadvmod</code></td>
+<td style="text-align: left;">名詞句による副詞的修飾語</td>
+<td style="text-align: left;"><strong><em>yesterday</em>*, </strong>this way***</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>quantmod</code></td>
+<td style="text-align: left;">量化修飾語</td>
+<td style="text-align: left;"><em>about </em><em>200</em>**</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>appos</code></td>
+<td style="text-align: left;">同格</td>
+<td style="text-align: left;"><em>Sam, </em><em>my brother</em>**</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>acl</code></td>
+<td style="text-align: left;">形容詞節・関係節</td>
+<td style="text-align: left;"><em>the man </em><em>who came</em>**</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>relcl</code></td>
+<td style="text-align: left;">関係節修飾語</td>
+<td style="text-align: left;"><em>the book </em><em>I read</em>**</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>advcl</code></td>
+<td style="text-align: left;">副詞節修飾語</td>
+<td style="text-align: left;"><em><strong>If it rains</strong>, I stay.</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>neg</code></td>
+<td style="text-align: left;">否定修飾語</td>
+<td style="text-align: left;"><em>I do </em><em>not</em><em> agree.</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>det</code></td>
+<td style="text-align: left;">限定詞</td>
+<td style="text-align: left;"><em><strong>the</strong> book</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>predet</code></td>
+<td style="text-align: left;">前限定詞</td>
+<td style="text-align: left;"><em><strong>all</strong> the people</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>poss</code></td>
+<td style="text-align: left;">所有修飾語</td>
+<td style="text-align: left;"><em><strong>my</strong> book</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_11">前置詞・格</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">ラベル</th>
+<th style="text-align: left;">説明</th>
+<th style="text-align: left;">例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>prep</code></td>
+<td style="text-align: left;">前置詞修飾語</td>
+<td style="text-align: left;"><em>go </em><em>to</em><em> school</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pobj</code></td>
+<td style="text-align: left;">前置詞の目的語</td>
+<td style="text-align: left;"><em>in the </em><em>house</em>**</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pcomp</code></td>
+<td style="text-align: left;">前置詞の補語</td>
+<td style="text-align: left;"><em>instead of </em><em>going</em>**</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>case</code></td>
+<td style="text-align: left;">格標示</td>
+<td style="text-align: left;"><em>John </em><em>'s</em><em> book</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_12">等位接続・接続</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">ラベル</th>
+<th style="text-align: left;">説明</th>
+<th style="text-align: left;">例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>conj</code></td>
+<td style="text-align: left;">等位要素</td>
+<td style="text-align: left;"><em>cats and </em><em>dogs</em>**</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>cc</code></td>
+<td style="text-align: left;">等位接続詞</td>
+<td style="text-align: left;"><em>cats </em><em>and</em><em> dogs</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>preconj</code></td>
+<td style="text-align: left;">前相関接続詞</td>
+<td style="text-align: left;"><em><strong>either</strong> A or B</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mark</code></td>
+<td style="text-align: left;">標識（従位接続詞）</td>
+<td style="text-align: left;"><em><strong>because</strong> it rained</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_13">動詞関連</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">ラベル</th>
+<th style="text-align: left;">説明</th>
+<th style="text-align: left;">例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>aux</code></td>
+<td style="text-align: left;">助動詞</td>
+<td style="text-align: left;"><em>I </em><em>have</em><em> eaten.</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>auxpass</code></td>
+<td style="text-align: left;">受動態助動詞</td>
+<td style="text-align: left;"><em>It </em><em>was</em><em> built.</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>compound</code></td>
+<td style="text-align: left;">複合語</td>
+<td style="text-align: left;"><strong><em>New</em>* York, </strong>ice*<em> cream</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>prt</code></td>
+<td style="text-align: left;">小辞（句動詞）</td>
+<td style="text-align: left;"><em>give </em><em>up</em><em>, turn </em><em>off</em>**</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_14">その他</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">ラベル</th>
+<th style="text-align: left;">説明</th>
+<th style="text-align: left;">例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>ROOT</code></td>
+<td style="text-align: left;">文の根</td>
+<td style="text-align: left;"><em>She </em><em>runs</em><em> fast.</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>punct</code></td>
+<td style="text-align: left;">句読点</td>
+<td style="text-align: left;"><em>Hello</em><em>,</em><em> world</em><em>.</em>**</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>parataxis</code></td>
+<td style="text-align: left;">並列構造（ゆるい節接続）</td>
+<td style="text-align: left;"><em>He said — </em><em>I agree</em><em>.</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>intj</code></td>
+<td style="text-align: left;">間投詞</td>
+<td style="text-align: left;"><em><strong>Well</strong>, I think...</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>dep</code></td>
+<td style="text-align: left;">未分類の依存要素</td>
+<td style="text-align: left;"><em>（包括的カテゴリ）</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>meta</code></td>
+<td style="text-align: left;">メタ修飾語</td>
+<td style="text-align: left;"><em>構造的マークアップ</em></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="morph-features">形態素性</h2>
+<p>個々のトークンの文法的特性です。<code>{#feature}</code> 記法で部分一致検索ができます（例：<code>{#past}</code> は形態素アノテーションに "Past" を含むすべてのトークンにマッチ）。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">素性</th>
+<th style="text-align: left;">値</th>
+<th style="text-align: left;">検索例</th>
+<th style="text-align: left;">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>VerbForm</code></td>
+<td style="text-align: left;">Fin, Ger, Inf, Part</td>
+<td style="text-align: left;"><code>{#ger}</code>, <code>{#inf}</code></td>
+<td style="text-align: left;">定形、動名詞、不定詞、分詞</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Tense</code></td>
+<td style="text-align: left;">Past, Pres</td>
+<td style="text-align: left;"><code>{#past}</code>, <code>{#pres}</code></td>
+<td style="text-align: left;">過去時制、現在時制</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Aspect</code></td>
+<td style="text-align: left;">Perf, Prog</td>
+<td style="text-align: left;"><code>{#perf}</code>, <code>{#prog}</code></td>
+<td style="text-align: left;">完了相、進行相</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Mood</code></td>
+<td style="text-align: left;">Ind</td>
+<td style="text-align: left;"><code>{#ind}</code></td>
+<td style="text-align: left;">直説法</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>VerbType</code></td>
+<td style="text-align: left;">Mod</td>
+<td style="text-align: left;"><code>{#mod}</code></td>
+<td style="text-align: left;">法助動詞</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Number</code></td>
+<td style="text-align: left;">Sing, Plur</td>
+<td style="text-align: left;"><code>{#sing}</code>, <code>{#plur}</code></td>
+<td style="text-align: left;">単数、複数</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Person</code></td>
+<td style="text-align: left;">1, 2, 3</td>
+<td style="text-align: left;"><code>{#person: 3}</code></td>
+<td style="text-align: left;">一人称、二人称、三人称</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Case</code></td>
+<td style="text-align: left;">Acc, Nom</td>
+<td style="text-align: left;"><code>{#nom}</code>, <code>{#acc}</code></td>
+<td style="text-align: left;">主格、対格</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Gender</code></td>
+<td style="text-align: left;">Fem, Masc, Neut</td>
+<td style="text-align: left;"><code>{#fem}</code>, <code>{#masc}</code></td>
+<td style="text-align: left;">文法的性（代名詞）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Degree</code></td>
+<td style="text-align: left;">Pos, Cmp, Sup</td>
+<td style="text-align: left;"><code>{#cmp}</code>, <code>{#sup}</code></td>
+<td style="text-align: left;">原級、比較級、最上級</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Definite</code></td>
+<td style="text-align: left;">Def, Ind</td>
+<td style="text-align: left;"><code>{#def}</code>, <code>{#ind}</code></td>
+<td style="text-align: left;">定・不定冠詞</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>PronType</code></td>
+<td style="text-align: left;">Art, Dem, Ind, Prs, Rel</td>
+<td style="text-align: left;"><code>{#dem}</code>, <code>{#rel}</code></td>
+<td style="text-align: left;">冠詞、指示、不定、人称、関係</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Poss</code></td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;"><code>{#poss}</code></td>
+<td style="text-align: left;">所有</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Reflex</code></td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;"><code>{#reflex}</code></td>
+<td style="text-align: left;">再帰代名詞</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Polarity</code></td>
+<td style="text-align: left;">Neg</td>
+<td style="text-align: left;"><code>{#neg}</code></td>
+<td style="text-align: left;">否定極性（<em>not</em>）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>NumType</code></td>
+<td style="text-align: left;">Card, Mult, Ord</td>
+<td style="text-align: left;"><code>{#ord}</code></td>
+<td style="text-align: left;">基数、倍数、序数</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Foreign</code></td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;"><code>{#foreign}</code></td>
+<td style="text-align: left;">外来語</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ConjType</code></td>
+<td style="text-align: left;">Cmp</td>
+<td style="text-align: left;"><code>{#conjtype}</code></td>
+<td style="text-align: left;">比較接続詞（<em>than</em>）</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">受動態について</p>
+<p>spaCyの <code>en_core_web_lg</code> モデルは、英語の形態素性として受動態をアノテーションしません。受動態を検索するには、依存関係ラベルの <code>{@auxpass}</code>（受動態助動詞）や <code>{@nsubjpass}</code>（受動態の主語）を使用してください。</p>
+</div>
+<hr />
+<h2 id="ner-types">固有表現タイプ</h2>
+<p>spaCyのNERモデルが認識する固有表現です。<code>%TYPE</code> 記法で検索できます（例：<code>%PERSON</code>、<code>say %ORG</code>）。詳しくは<a href="../named-entity-search/">固有表現検索</a>も参照してください。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">タイプ</th>
+<th style="text-align: left;">説明</th>
+<th style="text-align: left;">例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>PERSON</code></td>
+<td style="text-align: left;">人物（架空含む）</td>
+<td style="text-align: left;"><em>Obama, Einstein, Hamlet</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ORG</code></td>
+<td style="text-align: left;">組織、企業、機関</td>
+<td style="text-align: left;"><em>Google, the UN, NASA</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>GPE</code></td>
+<td style="text-align: left;">国、都市、州</td>
+<td style="text-align: left;"><em>France, New York, California</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>LOC</code></td>
+<td style="text-align: left;">GPE以外の場所：山、水域</td>
+<td style="text-align: left;"><em>the Alps, the Pacific, Antarctica</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>FAC</code></td>
+<td style="text-align: left;">施設：建物、空港、高速道路</td>
+<td style="text-align: left;"><em>the Eiffel Tower, JFK Airport</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>NORP</code></td>
+<td style="text-align: left;">国籍、宗教・政治グループ</td>
+<td style="text-align: left;"><em>American, Buddhist, Republican</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>DATE</code></td>
+<td style="text-align: left;">絶対・相対的な日付や期間</td>
+<td style="text-align: left;"><em>tomorrow, last year, 2024</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>TIME</code></td>
+<td style="text-align: left;">1日より短い時間</td>
+<td style="text-align: left;"><em>3 o'clock, this morning</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>MONEY</code></td>
+<td style="text-align: left;">金額</td>
+<td style="text-align: left;"><em>$5, 2 million euros</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>PERCENT</code></td>
+<td style="text-align: left;">パーセンテージ</td>
+<td style="text-align: left;"><em>fifty percent, 10%</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>QUANTITY</code></td>
+<td style="text-align: left;">測定値：重量、距離など</td>
+<td style="text-align: left;"><em>5 kg, 2 miles, 100 degrees</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>CARDINAL</code></td>
+<td style="text-align: left;">他のタイプに該当しない数詞</td>
+<td style="text-align: left;"><em>five, hundred, 42</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ORDINAL</code></td>
+<td style="text-align: left;">序数</td>
+<td style="text-align: left;"><em>first, 42nd, third</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>EVENT</code></td>
+<td style="text-align: left;">イベント名</td>
+<td style="text-align: left;"><em>World War II, the Olympics</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>WORK_OF_ART</code></td>
+<td style="text-align: left;">作品名</td>
+<td style="text-align: left;"><em>Hamlet, Mona Lisa</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>PRODUCT</code></td>
+<td style="text-align: left;">製品、車両、食品</td>
+<td style="text-align: left;"><em>iPhone, Boeing 747</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>LAW</code></td>
+<td style="text-align: left;">法律名</td>
+<td style="text-align: left;"><em>the Magna Carta, GDPR</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>LANGUAGE</code></td>
+<td style="text-align: left;">言語名</td>
+<td style="text-align: left;"><em>English, Mandarin, Arabic</em></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="search-syntax-summary">検索構文サマリー</h2>
+<p>アドバンスト・サーチで使用可能なすべての検索記法のクイックリファレンスです。詳しい使い方と例については<a href="../advanced-search-query-syntax/">検索クエリ構文</a>を参照してください。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">構文</th>
+<th style="text-align: left;">説明</th>
+<th style="text-align: left;">例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>word</code></td>
+<td style="text-align: left;">表層形検索</td>
+<td style="text-align: left;"><code>help</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>[lemma]</code></td>
+<td style="text-align: left;">レンマ（基本形）検索</td>
+<td style="text-align: left;"><code>[be]</code> → am, is, are, was, were, been, being</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>['s]</code></td>
+<td style="text-align: left;">リテラル表層形一致</td>
+<td style="text-align: left;"><code>['s]</code> → 's（所有格・短縮形）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>word{pos}</code></td>
+<td style="text-align: left;">表層形＋品詞フィルタ</td>
+<td style="text-align: left;"><code>help{verb}</code>, <code>help{noun}</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>[lemma]{pos}</code></td>
+<td style="text-align: left;">レンマ＋品詞フィルタ</td>
+<td style="text-align: left;"><code>[help]{noun}</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>{pos}</code></td>
+<td style="text-align: left;">品詞のみ検索</td>
+<td style="text-align: left;"><code>{propn}</code>（任意の固有名詞）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>{@tag_or_dep}</code></td>
+<td style="text-align: left;">Fine-Grainedタグまたは依存関係</td>
+<td style="text-align: left;"><code>{@VBG}</code>（動名詞）, <code>{@nsubj}</code>（主語）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>{#morph}</code></td>
+<td style="text-align: left;">形態素性</td>
+<td style="text-align: left;"><code>{#past}</code>（過去形）, <code>{#plur}</code>（複数形）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>{-pos}</code></td>
+<td style="text-align: left;">否定品詞フィルタ</td>
+<td style="text-align: left;"><code>{-verb}</code>（動詞でない）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>-word</code></td>
+<td style="text-align: left;">否定語一致</td>
+<td style="text-align: left;"><code>-the</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>a\|b</code></td>
+<td style="text-align: left;">OR（選択肢）</td>
+<td style="text-align: left;"><code>help\|assist</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>+prefix</code></td>
+<td style="text-align: left;">前方一致</td>
+<td style="text-align: left;"><code>+un</code> → un..., under..., until...</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>{}</code> or <code>*</code></td>
+<td style="text-align: left;">ワイルドカード（1語以上）</td>
+<td style="text-align: left;"><code>[make] {} {noun}</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>-_</code></td>
+<td style="text-align: left;">ワイルドカード（1語のみ）</td>
+<td style="text-align: left;"><code>to -_ surprise</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>_</code></td>
+<td style="text-align: left;">名詞チャンクプレースホルダー</td>
+<td style="text-align: left;"><code>[give] _ _</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>^</code></td>
+<td style="text-align: left;">セグメント先頭</td>
+<td style="text-align: left;"><code>^ however</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>%TYPE</code></td>
+<td style="text-align: left;">固有表現検索</td>
+<td style="text-align: left;"><code>%PERSON</code>, <code>say %ORG</code></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="フッター" >
+        
+          
+          <a href="../named-entity-search/" class="md-footer__link md-footer__link--prev" aria-label="前: 固有表現検索">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                前
+              </span>
+              <div class="md-ellipsis">
+                固有表現検索
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../video-type-filter/" class="md-footer__link md-footer__link--next" aria-label="次: ビデオタイプフィルタ">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                次
+              </span>
+              <div class="md-ellipsis">
+                ビデオタイプフィルタ
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.sections", "navigation.expand", "navigation.footer", "search.highlight", "content.tabs"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
