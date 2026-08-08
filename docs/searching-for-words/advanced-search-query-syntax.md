@@ -21,6 +21,7 @@ TCSE's advanced search mode supports a rich query syntax for linguistic analysis
 | Prefix match | `+PREFIX` | `+un {adj}` |
 | Literal surface form | `['SURFACE']` | `['s]` |
 | Noun chunk placeholder | `_` | `[give] _ _` |
+| Typed noun chunk | `_{COND}` | `[give] _{pron} _` |
 | Wildcard (one word) | `-_` | `to -_ surprise` |
 | Wildcard (multiple words) | `*` | `to * surprise` |
 
@@ -31,6 +32,24 @@ TCSE's advanced search mode supports a rich query syntax for linguistic analysis
 | `_` | Exactly one **noun chunk** (may span multiple words) | `[give] _ _` matches "give the students a chance" |
 | `-_` | Exactly one **word** (any word) | `to -_ surprise` matches "to my surprise", "to our surprise" |
 | `*` | Zero or more words (greedy) | `to * surprise` matches "to his great surprise" |
+
+### Typed noun chunks: `_{COND}`
+
+Available since v13.1.0 (August 2026). A bare `_` matches any noun chunk; `_{COND}` additionally constrains the chunk by its **head (root) token**. The condition uses the same mini-language as `{...}` on ordinary tokens:
+
+| Query | Matches |
+| :--- | :--- |
+| `_{pron}` | a noun chunk headed by a pronoun (*me*, *them*, ...) |
+| `_{noun\|propn}` | a chunk headed by a common or proper noun |
+| `_{-pron}` | the complement: any noun chunk **not** headed by a pronoun |
+| `_{@nsubj}` | a chunk whose head bears the `nsubj` dependency |
+
+- One-letter aliases work as elsewhere: `_{v}`, `_{n}`, `_{a}`, `_{pr}` etc.
+- Conditions can combine with `\|` (or), `&` (and), and `-` (negation).
+- `_{X}` and `_{-X}` partition the matches of bare `_` exactly, so complements can be used for exhaustive classification.
+- Named-entity types (`%PERSON` etc.) are **not** allowed inside the condition.
+
+Example: `[give\|send\|tell\|show\|offer] _{pron} _` retrieves double-object (ditransitive) instances whose recipient is a pronoun; replacing `_{pron}` with `_{-pron}` retrieves all the others.
 
 ## POS Tags
 
