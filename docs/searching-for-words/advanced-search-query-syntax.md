@@ -43,11 +43,12 @@ Available since v13.1.0 (August 2026). A bare `_` matches any noun chunk; `_{CON
 | `_{noun\|propn}` | a chunk headed by a common or proper noun |
 | `_{-pron}` | the complement: any noun chunk **not** headed by a pronoun |
 | `_{@nsubj}` | a chunk whose head bears the `nsubj` dependency |
+| `_{%PERSON}` | a chunk headed by a PERSON entity (since v13.2.0) |
 
 - One-letter aliases work as elsewhere: `_{v}`, `_{n}`, `_{a}`, `_{pr}` etc.
 - Conditions can combine with `\|` (or), `&` (and), and `-` (negation).
 - `_{X}` and `_{-X}` partition the matches of bare `_` exactly, so complements can be used for exhaustive classification.
-- Named-entity types (`%PERSON` etc.) are **not** allowed inside the condition.
+- Named-entity types are accepted since v13.2.0 (August 2026): `_{%PERSON}` matches a chunk whose head token belongs to a PERSON entity; types can be combined with `\|` (`_{%PERSON\|%ORG}`); the complement `_{-%PERSON}` includes chunks headed by non-entity tokens. Unknown type names are rejected.
 
 Example: `[give\|send\|tell\|show\|offer] _{pron} _` retrieves double-object (ditransitive) instances whose recipient is a pronoun; replacing `_{pron}` with `_{-pron}` retrieves all the others.
 
