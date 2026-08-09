@@ -48,9 +48,23 @@ Available since v13.1.0 (August 2026). A bare `_` matches any noun chunk; `_{CON
 - One-letter aliases work as elsewhere: `_{v}`, `_{n}`, `_{a}`, `_{pr}` etc.
 - Conditions can combine with `\|` (or), `&` (and), and `-` (negation).
 - `_{X}` and `_{-X}` partition the matches of bare `_` exactly, so complements can be used for exhaustive classification.
+- Conditions of different kinds mix freely in a disjunction: `_{pron\|%PERSON}` matches a chunk headed by a pronoun **or** belonging to a PERSON entity—a practical way to say "a human referent."
 - Named-entity types are accepted since v13.2.0 (August 2026): `_{%PERSON}` matches a chunk whose head token belongs to a PERSON entity; types can be combined with `\|` (`_{%PERSON\|%ORG}`); the complement `_{-%PERSON}` includes chunks headed by non-entity tokens. Unknown type names are rejected.
 
 Example: `[give\|send\|tell\|show\|offer] _{pron} _` retrieves double-object (ditransitive) instances whose recipient is a pronoun; replacing `_{pron}` with `_{-pron}` retrieves all the others.
+
+### Lemma echo: `:N` and `=N`
+
+Available since v13.3.0 (August 2026). A slot can *bind* the lemma of whatever it matches by adding `:N` inside its condition (`{verb:1}`, `[dream]{verb:1}`); a later noun-chunk condition can then *reference* that binding with `=N`, matching a chunk whose **root lemma is the same lemma**.
+
+| Query | Matches |
+| :--- | :--- |
+| `{noun:1} [after] _{=1}` | N-*after*-N reduplication: *study after study*, *year after year* |
+| `[dream]{verb:1} * _{=1}` | cognate objects: *dream a dream* |
+| `... _{=1&@dobj}` | the echo combines with other chunk conditions |
+
+- `:N` can be attached to ordinary token conditions (`{verb:1}`) and to lemma slots (`[dream]{verb:1}`).
+- `=N` must refer to a slot bound **earlier in the query**. Unbound or forward references, binding the same `N` twice, and negated echoes (`-=N`) are rejected as query errors.
 
 ## POS Tags
 
@@ -68,6 +82,7 @@ Common POS tags used in queries (case-insensitive). For the complete list of all
 ## Morphological Features
 
 Use `{#feature}` to search by morphological properties (partial matching on the morph annotation):
+The full annotation (e.g., `Tense: Past`) contains a space and cannot be typed inside a query; the value alone is the official form (`{#past}`, `{#plur}`, `{#prog}`). Matching is case-insensitive and partial.
 
 | Feature | Matches |
 | :--- | :--- |
