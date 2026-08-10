@@ -18,6 +18,10 @@ TCSE is created by [Yoichiro Hasebe](https://yohasebe.com) (`yohasebe@gmail.com`
 
 The current version is **13.5.0**, containing **6,419 TED Talks**. All transcript data is annotated using [spaCy](https://spacy.io/) 3.8 (`en_core_web_lg`) for part-of-speech tagging, lemmatization, dependency parsing, morphological analysis, and named entity recognition.
 
+## How should I cite TCSE?
+
+Please cite Hasebe (2015) and/or Hasebe (2018), and take the corpus size and version from the figures shown on the [documentation home](index.md#current-version) rather than from the published articles, which describe the system as it was at the time of writing. See [How to Cite TCSE](index.md#how-to-cite-tcse) for the full references and guidance.
+
 ## How frequently is TCSE database updated?
 
 TCSE is updated periodically with newly added talks, transcriptions, and translations. Thus the statistical data of TCSE as a linguistic corpus continuously change through time.

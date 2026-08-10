@@ -14,6 +14,21 @@ TCSE は TED Talk のトランスクリプトの検索に特化したサーチ�
 - **NLPエンジン**: spaCy 3.8 (`en_core_web_lg`)
 - **最終更新日**: 2026年4月10日
 
+## TCSEの引用について
+
+研究成果等でTCSEに言及される際は、下記の文献をご引用ください。
+
+> Hasebe, Yoichiro. 2015. Design and implementation of an online corpus of presentation transcripts of TED Talks. *Procedia: Social and Behavioral Sciences* 198(24). 174–182.
+>
+> 長谷部陽一郎. 2018.「TED Corpus Search Engine: TED Talks を教育と研究に活用するためのプラットフォーム」『英語コーパス研究』25. 159–172.
+
+!!! note "コーパス規模・バージョンの記載について"
+
+    これらの論文に記載された数値は**執筆当時のシステム**を記述したものです（たとえば2015年の論文では約1,800トークと報告されています）。その後コーパスは大きく成長しました。使用したコーパスの規模やバージョンを記載される際は、論文中の数値をそのまま転記するのではなく、上の**現在のバージョン**の値をご参照ください（あわせて検索を実行した日付を明記いただくと確実です）。
+
+    クエリ構文についても同様です。型付き名詞チャンクスロットやレンマ照応などの機能は v13 で追加されたもので、過去の論文には記述がありません。現行の仕様は[高度な検索クエリ構文](searching-for-words/advanced-search-query-syntax.ja.md)を参照してください。
+
+
 ## 最近のアップデート（v13）
 
 バージョン13では、advanced search に**型付き抽象化**の層が加わりました。名詞チャンクは単なるプレースホルダーではなく、条件を付けたり相互参照したりできるスロットになっています。詳細は[高度な検索クエリ構文](searching-for-words/advanced-search-query-syntax.ja.md)を参照してください。
