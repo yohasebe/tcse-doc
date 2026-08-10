@@ -8,11 +8,20 @@ TCSE is a search engine specializing in exploring transcripts of TED Talks. It h
 
 ## Current Version
 
-- **Version**: 12.3.0
+- **Version**: 13.5.0
 - **Talks**: 6,419 TED Talks
 - **Languages**: 34 translation languages
 - **NLP Engine**: spaCy 3.8 (`en_core_web_lg`)
 - **Last Updated**: April 10, 2026
+
+## Recent Updates (v13)
+
+Version 13 adds a layer of *typed abstraction* to Advanced Search: noun chunks are no longer just placeholders, but slots you can constrain and cross-reference. See [Advanced Search Query Syntax](searching-for-words/advanced-search-query-syntax.md) for full details.
+
+- **Typed noun-chunk slots** (v13.1.0) — `_{COND}` constrains a chunk by its head (root) token: `_{pron}` matches chunks headed by a pronoun, `_{-pron}` its exact complement. Example: `[give|send|tell] _{pron} _` retrieves ditransitives with pronominal recipients.
+- **Entity-typed chunk conditions** (v13.2.0) — `_{%PERSON}` matches a chunk headed by a PERSON entity; types combine with `|` (`_{%PERSON|%ORG}`) and mix with other conditions (`_{pron|%PERSON}` for "a human referent").
+- **Lemma echo** (v13.3.0, extended in v13.4.0) — Bind a slot's lemma with `:N` and refer to it later with `=N`, so that cross-slot identity becomes a single query: `{noun:1} [after] _{=1}` retrieves *study after study*, and `{adv:1} [and] {=1&adv}` retrieves *over and over*.
+- **Chunk-head lemma conditions** (v13.5.0) — `_{[life]}` matches chunks whose root lemma is *life*, so cognate objects come out directly: `[live]{verb} _{[life]}`.
 
 ## Recent Updates (v11–v12)
 
@@ -45,6 +54,7 @@ TCSE is a search engine specializing in exploring transcripts of TED Talks. It h
 
 - **Full-text search** across all TED Talk transcripts
 - **Advanced linguistic search** with POS tags, lemmas, dependency relations, morphological features, and named entities
+- **Typed noun-chunk slots** — Constrain and cross-reference phrase-level slots (`_{pron}`, `_{%PERSON}`, `_{[life]}`, lemma echo `:N`/`=N`)
 - **KWIC concordance view** for linguistic analysis
 - **Collocation mode** — N-gram frequency (1-gram to 4-gram), collocation statistics, and network visualization
 - **Construction search** for 1,160 grammatical patterns (idioms, phrasal verbs, etc.)

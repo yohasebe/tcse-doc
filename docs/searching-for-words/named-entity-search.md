@@ -51,3 +51,16 @@ TCSE recognizes 18 named entity types:
 | `%MONEY` | All monetary expressions |
 | `%DATE` | All date expressions |
 | `%ORG [be]` | Organization names followed by forms of "be" |
+
+## Entity types inside chunk conditions
+
+Since v13.2.0, entity types can also constrain a **noun chunk** rather than a single token. `_{%PERSON}` matches a chunk whose head belongs to a PERSON entity, and types can be combined or mixed with other conditions:
+
+| Query | What it finds |
+| :--- | :--- |
+| `_{%PERSON}` | Noun chunks headed by a person name |
+| `_{%PERSON\|%ORG}` | Chunks headed by a person or an organization |
+| `_{pron\|%PERSON}` | Chunks with a human referent (pronoun or person name) |
+| `_{-%PERSON}` | The complement: every chunk not headed by a person name |
+
+See [Advanced Search Query Syntax](advanced-search-query-syntax.md#typed-noun-chunks-_cond) for the full chunk-condition language.

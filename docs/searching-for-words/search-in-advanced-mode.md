@@ -7,4 +7,4 @@
 
 ![Sample Results](images/08.png)
 
-Advanced search supports POS tags, lemmas, dependency relations, morphological features, named entities, wildcards, and more. See the [query syntax reference](advanced-search-query-syntax.md) for details.
+Advanced search supports POS tags, lemmas, dependency relations, morphological features, named entities, wildcards, typed noun-chunk slots (`_{pron}`, `_{%PERSON}`, `_{[life]}`), and lemma echo across slots (`:N` / `=N`). See the [query syntax reference](advanced-search-query-syntax.md) for details.
