@@ -64,6 +64,7 @@ Available since v13.3.0 (August 2026). A slot can *bind* the lemma of whatever i
 | `... _{=1&@dobj}` | the echo combines with other chunk conditions |
 
 - `:N` can be attached to ordinary token conditions (`{verb:1}`) and to lemma slots (`[dream]{verb:1}`).
+- Since v13.4.0, `=N` also works inside ordinary token conditions: `{adv:1} [and] {=1&adv}` retrieves reduplicative adverb pairs (*over and over*, *again and again*).
 - `=N` must refer to a slot bound **earlier in the query**. Unbound or forward references, binding the same `N` twice, and negated echoes (`-=N`) are rejected as query errors.
 
 ## POS Tags
