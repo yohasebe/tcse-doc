@@ -44,10 +44,12 @@ Available since v13.1.0 (August 2026). A bare `_` matches any noun chunk; `_{CON
 | `_{-pron}` | the complement: any noun chunk **not** headed by a pronoun |
 | `_{@nsubj}` | a chunk whose head bears the `nsubj` dependency |
 | `_{%PERSON}` | a chunk headed by a PERSON entity (since v13.2.0) |
+| `_{[life]}` | a chunk whose root lemma is *life* (since v13.5.0) |
 
 - One-letter aliases work as elsewhere: `_{v}`, `_{n}`, `_{a}`, `_{pr}` etc.
 - Conditions can combine with `\|` (or), `&` (and), and `-` (negation).
 - `_{X}` and `_{-X}` partition the matches of bare `_` exactly, so complements can be used for exhaustive classification.
+- Since v13.5.0, a chunk condition can require a specific **root lemma**: `_{[life]}` matches chunks headed by the lemma *life* (*a life*, *the lives we lead*). It composes with other conditions (`_{[life]&noun}`) and can be negated (`_{-[life]}`)—e.g., `[live]{verb} _{[life]}` retrieves cognate-object pairs directly.
 - Conditions of different kinds mix freely in a disjunction: `_{pron\|%PERSON}` matches a chunk headed by a pronoun **or** belonging to a PERSON entity—a practical way to say "a human referent."
 - Named-entity types are accepted since v13.2.0 (August 2026): `_{%PERSON}` matches a chunk whose head token belongs to a PERSON entity; types can be combined with `\|` (`_{%PERSON\|%ORG}`); the complement `_{-%PERSON}` includes chunks headed by non-entity tokens. Unknown type names are rejected.
 

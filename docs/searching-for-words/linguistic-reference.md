@@ -286,5 +286,6 @@ Quick reference for all search notation available in Advanced Search mode. For d
 | `{}` or `*` | Wildcard (one or more words) | `[make] {} {noun}` |
 | `-_` | Wildcard (exactly one word) | `to -_ surprise` |
 | `_` | Noun chunk placeholder | `[give] _ _` |
+| `_{COND}` | Typed noun chunk (root-token condition: POS, `%TYPE`, `[lemma]`, `=N`) | `_{pron}`, `_{%PERSON}`, `_{[life]}` |
 | `^` | Start of segment | `^ however` |
 | `%TYPE` | Named entity search | `%PERSON`, `say %ORG` |
