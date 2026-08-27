@@ -54,4 +54,4 @@ The **Syntax Profile** row provides four metrics that characterize the syntactic
 | **Relative clauses** | Percentage of clauses that are relative clauses (e.g., "the person *who spoke*"). Higher values indicate more complex sentence embedding. |
 | **Subordination** | Percentage of clauses that are subordinate clauses (e.g., "*because* ...", "*although* ..."). Higher values indicate more complex sentence structures. |
 
-These metrics, combined with the readability score and CEFR vocabulary profile, give a comprehensive picture of the linguistic complexity of a talk.
+These metrics, together with the readability score and the CEFR vocabulary profile, summarize the linguistic complexity of a talk.

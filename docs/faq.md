@@ -1,11 +1,5 @@
 # Frequently Asked Questions
 
-## How can I refer to TCSE?
-
-Please cite the following when you publish work which utilizes TCSE:
-
-- Hasebe, Yoichiro. (2015) Design and Implementation of an Online Corpus of Presentation Transcripts of TED Talks. *Procedia: Social and Behavioral Sciences* 198(24), 174-182.
-
 ## What are the terms of use of TED data?
 
 TCSE uses data provided by TED under the Creative Commons BY-NC-ND license.
@@ -16,7 +10,7 @@ TCSE is created by [Yoichiro Hasebe](https://yohasebe.com) (`yohasebe@gmail.com`
 
 ## What version of TCSE is currently running?
 
-The current version is **13.5.0**, containing **6,419 TED Talks**. All transcript data is annotated using [spaCy](https://spacy.io/) 3.8 (`en_core_web_lg`) for part-of-speech tagging, lemmatization, dependency parsing, morphological analysis, and named entity recognition.
+The current version is **13.6.1**, containing **6,419 TED Talks**. All transcript data is annotated using [spaCy](https://spacy.io/) 3.8 (`en_core_web_lg`) for part-of-speech tagging, lemmatization, dependency parsing, morphological analysis, and named entity recognition.
 
 ## How should I cite TCSE?
 

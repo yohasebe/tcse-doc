@@ -8,7 +8,7 @@ Highlighting is **off by default** to keep the transcript view clean. Use the ch
 
 ### Keywords
 
-Highlights content words with high TF-IDF scores (> 3.0) for the current talk. These are words that are statistically significant in the talk compared to the overall corpus, helping you quickly identify the talk's key topics and terminology.
+Highlights content words with high TF-IDF scores for the current talk. These are words that are statistically significant in the talk compared to the overall corpus, helping you quickly identify the talk's key topics and terminology.
 
 ### Discourse Markers
 

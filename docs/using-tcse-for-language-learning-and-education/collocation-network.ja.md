@@ -72,7 +72,7 @@
 - 否定辞: *not*
 - 助動詞: *has, have, had, do, does, did, will, would, can, could, may, might, shall, should, must*
 - 代名詞: *it, its, this, that, there, their, they, them, he, she, him, her, his, we, our, you, your, who, which, what, how*
-- 数量詞・限定詞: *all, some, no, any, each, every, much, many, more, most, such, only*
+- 数量詞・限定詞: *all, some, no, any, each, much, many, more, most, such, only*
 - 数詞: *one* 〜 *ten*、*first, second, third, last, next*
 - 高頻度副詞: *also, just, even, still, back, up, out, then, too, when, where, here*
 
@@ -85,7 +85,7 @@
 - "make", "makes", "made", "making" → 1つのノード "make"
 - "great", "greater", "greatest" → 1つのノード "great"
 
-これにより、関連する語形を統合し、すべての表層形にわたるコロケーション関係の真の強度を示す、より明確で意味のあるネットワークが生成されます。
+これにより、個々の表層形ではなくレンマ単位の共起関係がネットワークに反映されます。
 
 !!! tip "ヒント"
     - 内容語（名詞、動詞、形容詞）で検索すると、最も情報量の多いネットワークが得られる

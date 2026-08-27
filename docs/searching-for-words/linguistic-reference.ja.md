@@ -1,6 +1,6 @@
 # 言語アノテーション リファレンス
 
-TCSEのすべてのトランスクリプトデータは、[spaCy](https://spacy.io/) 3.8（`en_core_web_lg`）を用いてアノテーションされています。このページでは、TCSEのアドバンスト・サーチで使用されるすべての言語アノテーションカテゴリの完全なリファレンスを提供します。
+TCSEのすべてのトランスクリプトデータは、[spaCy](https://spacy.io/) 3.8（`en_core_web_lg`）を用いてアノテーションされています。このページでは、TCSEのアドバンスト・サーチで使用される言語アノテーションカテゴリを一覧します。
 
 !!! tip "クイックリンク"
     - [Universal POS タグ](#universal-pos)
@@ -16,11 +16,11 @@ TCSEのすべてのトランスクリプトデータは、[spaCy](https://spacy.
 
 [Universal Dependencies](https://universaldependencies.org/u/pos/) に基づく粗粒度の品詞カテゴリです。アドバンスト・サーチでは `{pos}` 記法で使用します（例：`help{verb}`、`[be]{aux}`）。
 
-よく使うタグには**略称エイリアス**が用意されています。たとえば `{verb}` の代わりに `{v}` が使えます。
+よく使うタグには**略称エイリアス**が用意されています。たとえば `{verb}` の代わりに `{v}` が使えます。ただしエイリアス `{a}` は文脈によって解決が変わるため避けてください。単独では `{adv}` に解決されますが、複合条件（`|`・`&`）の中では adj に解決されます。`{adj}`・`{adv}`（または `{j}`・`{r}`）を使ってください。
 
 | タグ | 品詞 | 検索記法 | エイリアス | 種別 | 例 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| `ADJ` | 形容詞 | `{adj}` | `{a}`, `{j}`, `{jj}` | 開放類 | *big, old, green, first* |
+| `ADJ` | 形容詞 | `{adj}` | `{j}`, `{jj}` | 開放類 | *big, old, green, first* |
 | `ADV` | 副詞 | `{adv}` | `{r}`, `{rb}` | 開放類 | *very, well, exactly, tomorrow* |
 | `INTJ` | 間投詞 | `{intj}` | | 開放類 | *hello, ouch, bravo* |
 | `NOUN` | 名詞 | `{noun}` | `{n}`, `{nn}` | 開放類 | *people, time, world, way* |
@@ -220,7 +220,7 @@ TCSEのすべてのトランスクリプトデータは、[spaCy](https://spacy.
 | `Mood` | Ind | `{#ind}` | 直説法 |
 | `VerbType` | Mod | `{#mod}` | 法助動詞 |
 | `Number` | Sing, Plur | `{#sing}`, `{#plur}` | 単数、複数 |
-| `Person` | 1, 2, 3 | `{#person: 3}` | 一人称、二人称、三人称 |
+| `Person` | 1, 2, 3 | `{#person}` | 一人称、二人称、三人称 |
 | `Case` | Acc, Nom | `{#nom}`, `{#acc}` | 主格、対格 |
 | `Gender` | Fem, Masc, Neut | `{#fem}`, `{#masc}` | 文法的性（代名詞） |
 | `Degree` | Pos, Cmp, Sup | `{#cmp}`, `{#sup}` | 原級、比較級、最上級 |
@@ -281,11 +281,11 @@ spaCyのNERモデルが認識する固有表現です。`%TYPE` 記法で検索�
 | `{#morph}` | 形態素性 | `{#past}`（過去形）, `{#plur}`（複数形） |
 | `{-pos}` | 否定品詞フィルタ | `{-verb}`（動詞でない） |
 | `-word` | 否定語一致 | `-the` |
-| `a\|b` | OR（選択肢） | `help\|assist` |
+| <code>a&#124;b</code> | OR（選択肢） | <code>help&#124;assist</code> |
 | `+prefix` | 前方一致 | `+un` → un..., under..., until... |
-| `{}` or `*` | ワイルドカード（1語以上） | `[make] {} {noun}` |
-| `-_` | ワイルドカード（1語のみ） | `to -_ surprise` |
+| `{}` または `-_` | ワイルドカード（ちょうど1語） | `[make] {} {noun}` |
+| `*` | ワイルドカード（0語以上） | `to * surprise` |
 | `_` | 名詞チャンクプレースホルダー | `[give] _ _` |
-| `_{COND}` | 型付き名詞チャンク（root トークンへの条件: 品詞・`%TYPE`・`[lemma]`・`=N`） | `_{pron}`, `_{%PERSON}`, `_{[life]}` |
+| `_{COND}` | 型付き名詞チャンク（root トークンへの条件: 品詞・`%TYPE`・`[lemma]`・<code>[a&#124;b]</code>・`=N`） | `_{pron}`, `_{%PERSON}`, <code>_{[part&#124;role]}</code> |
 | `^` | セグメント先頭 | `^ however` |
 | `%TYPE` | 固有表現検索 | `%PERSON`, `say %ORG` |

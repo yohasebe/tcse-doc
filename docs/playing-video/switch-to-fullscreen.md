@@ -2,7 +2,7 @@
 
 Click on the **fullscreen** icon or press `ESC`, `E`, or `B` key while playing video to switch from normal viewing mode to fullscreen mode and vice versa.
 
-In fullscreen viewing mode, the transcript (and its translation text) will be shown only when the video is paused. This greatly helps those who watch TED videos to train their English listening skills — see [Pause and Check](../using-tcse-for-language-learning-and-education/using-pause-and-check.md).
+In fullscreen viewing mode, the transcript (and its translation text) will be shown only when the video is paused. This is useful for listening practice — see [Pause and Check](../using-tcse-for-language-learning-and-education/using-pause-and-check.md).
 
 ![Video player with fullscreen toggle icon in the bottom-right control bar](images/05.png){ width="600" }
 

@@ -1,6 +1,6 @@
 # Using pause-and-check
 
-Listening ability does not improve if you keep reading the transcript all the time. But without a transcript, it can be difficult to follow the talk and grasp the speaker's message. This is especially the case for learners at elementary and intermediate levels. The "pause-and-check" functionality of TCSE offers the best of both worlds.
+Listening ability does not improve if you keep reading the transcript all the time. But without a transcript, it can be difficult to follow the talk and grasp the speaker's message. This is especially the case for learners at elementary and intermediate levels. The "pause-and-check" style of viewing in TCSE addresses both needs.
 
 In fullscreen viewing mode, the transcript and its translation text are shown **only when the video is paused**, so you can concentrate on listening instead of reading text on the screen. When there's anything unclear or difficult to understand, simply pause and check the transcript.
 

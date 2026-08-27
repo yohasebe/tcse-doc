@@ -1,6 +1,6 @@
 # Collocation analysis
 
-TCSE provides collocation analysis to help you discover which words frequently co-occur with your search term. This is valuable for understanding natural word combinations and improving vocabulary knowledge.
+Collocation analysis shows which words frequently co-occur with your search term.
 
 ## How to access
 
@@ -30,10 +30,10 @@ You can sort collocation results by different statistical measures:
 
 Collocation results are **grouped by lemma** (base form). This means that all inflected forms of a word are combined into a single entry. For example, searching for "make" will show:
 
-- "make + mistake" (freq=109) — combining "make a mistake", "makes mistakes", "made a mistake", etc.
-- "make + decision" (freq=218) — combining all forms
+- *make + mistake* — combining "make a mistake", "makes mistakes", "made a mistake", etc.
+- *make + decision* — combining all inflected forms
 
-This gives a more accurate picture of the true collocational strength between words. Hover over a lemma to see all the surface forms that were aggregated. Click on a row to search for all instances using lemma search syntax.
+The frequency shown for each pair is the sum over all these forms. Hover over a lemma to see all the surface forms that were aggregated. Click on a row to search for all instances using lemma search syntax.
 
 ## Collocation network
 

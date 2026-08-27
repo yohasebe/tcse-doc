@@ -1,11 +1,5 @@
 # よくある質問
 
-## TCSEを引用するには？
-
-TCSEを利用した成果を発表する際は、以下を引用してください。
-
-- Hasebe, Yoichiro. (2015) Design and Implementation of an Online Corpus of Presentation Transcripts of TED Talks. *Procedia: Social and Behavioral Sciences* 198(24), 174-182.
-
 ## TEDデータの利用条件は？
 
 TCSE は TED のデータを Creative Commons BY-NC-ND ライセンスのもとに使用しています。
@@ -16,7 +10,7 @@ TCSE は同志社大学の[長谷部陽一郎](https://yohasebe.com)（`yohasebe
 
 ## 現在のTCSEのバージョンは？
 
-現在のバージョンは **13.5.0** で、**6,419件の TED Talk** を収録しています。すべてのトランスクリプトデータは [spaCy](https://spacy.io/) 3.8（`en_core_web_lg`）による品詞タグ付け、レンマ化、依存構造解析、形態素解析、固有表現認識の処理が施されています。
+現在のバージョンは **13.6.1** で、**6,419件の TED Talk** を収録しています。すべてのトランスクリプトデータは [spaCy](https://spacy.io/) 3.8（`en_core_web_lg`）による品詞タグ付け、レンマ化、依存構造解析、形態素解析、固有表現認識の処理が施されています。
 
 ## TCSEはどのように引用すればよいですか？
 

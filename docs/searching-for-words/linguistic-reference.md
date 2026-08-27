@@ -1,6 +1,6 @@
 # Linguistic Reference
 
-All transcript data in TCSE is annotated using [spaCy](https://spacy.io/) 3.8 (`en_core_web_lg`). This page provides a comprehensive reference for all linguistic annotation categories used in TCSE's Advanced Search.
+All transcript data in TCSE is annotated using [spaCy](https://spacy.io/) 3.8 (`en_core_web_lg`). This page lists the linguistic annotation categories used in TCSE's Advanced Search.
 
 !!! tip "Quick links"
     - [Universal POS Tags](#universal-pos-tags)
@@ -16,11 +16,11 @@ All transcript data in TCSE is annotated using [spaCy](https://spacy.io/) 3.8 (`
 
 Coarse-grained part-of-speech categories based on [Universal Dependencies](https://universaldependencies.org/u/pos/). Used in Advanced Search with `{pos}` notation (e.g., `help{verb}`, `[be]{aux}`).
 
-**Shorthand aliases** are available for frequently used tags — for example, `{v}` can be used instead of `{verb}`.
+**Shorthand aliases** are available for frequently used tags — for example, `{v}` can be used instead of `{verb}`. The alias `{a}` resolves differently depending on context and is best avoided: on its own it resolves to `{adv}`, but inside combined conditions (`|`, `&`) it resolves to `adj`. Use `{adj}` / `{adv}` (or `{j}` / `{r}`) instead.
 
 | Tag | Part of Speech | Search | Aliases | Type | Examples |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| `ADJ` | Adjective | `{adj}` | `{a}`, `{j}`, `{jj}` | Open | *big, old, green, first* |
+| `ADJ` | Adjective | `{adj}` | `{j}`, `{jj}` | Open | *big, old, green, first* |
 | `ADV` | Adverb | `{adv}` | `{r}`, `{rb}` | Open | *very, well, exactly, tomorrow* |
 | `INTJ` | Interjection | `{intj}` | | Open | *hello, ouch, bravo* |
 | `NOUN` | Noun | `{noun}` | `{n}`, `{nn}` | Open | *people, time, world, way* |
@@ -220,7 +220,7 @@ Grammatical properties of individual tokens. Searchable with `{#feature}` notati
 | `Mood` | Ind | `{#ind}` | Indicative mood |
 | `VerbType` | Mod | `{#mod}` | Modal verb |
 | `Number` | Sing, Plur | `{#sing}`, `{#plur}` | Singular or plural |
-| `Person` | 1, 2, 3 | `{#person: 3}` | 1st, 2nd, or 3rd person |
+| `Person` | 1, 2, 3 | `{#person}` | 1st, 2nd, or 3rd person |
 | `Case` | Acc, Nom | `{#nom}`, `{#acc}` | Nominative or accusative case |
 | `Gender` | Fem, Masc, Neut | `{#fem}`, `{#masc}` | Grammatical gender (pronouns) |
 | `Degree` | Pos, Cmp, Sup | `{#cmp}`, `{#sup}` | Positive, comparative, superlative |
@@ -281,11 +281,11 @@ Quick reference for all search notation available in Advanced Search mode. For d
 | `{#morph}` | Morphological feature | `{#past}` (past tense), `{#plur}` (plural) |
 | `{-pos}` | Negative POS filter | `{-verb}` (not a verb) |
 | `-word` | Negative word match | `-the` |
-| `a\|b` | OR alternatives | `help\|assist` |
+| <code>a&#124;b</code> | OR alternatives | <code>help&#124;assist</code> |
 | `+prefix` | Prefix match | `+un` → un..., under..., until... |
-| `{}` or `*` | Wildcard (one or more words) | `[make] {} {noun}` |
-| `-_` | Wildcard (exactly one word) | `to -_ surprise` |
+| `{}` or `-_` | Wildcard (exactly one word) | `[make] {} {noun}` |
+| `*` | Wildcard (zero or more words) | `to * surprise` |
 | `_` | Noun chunk placeholder | `[give] _ _` |
-| `_{COND}` | Typed noun chunk (root-token condition: POS, `%TYPE`, `[lemma]`, `=N`) | `_{pron}`, `_{%PERSON}`, `_{[life]}` |
+| `_{COND}` | Typed noun chunk (root-token condition: POS, `%TYPE`, `[lemma]`, <code>[a&#124;b]</code>, `=N`) | `_{pron}`, `_{%PERSON}`, <code>_{[part&#124;role]}</code> |
 | `^` | Start of segment | `^ however` |
 | `%TYPE` | Named entity search | `%PERSON`, `say %ORG` |

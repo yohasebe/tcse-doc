@@ -35,6 +35,7 @@ plugins:
           nav:
             - ホーム: index.md
             - よくある質問: faq.md
+            - 更新履歴: changelog.md
             - 語句の検索:
               - トランスクリプトを検索: searching-for-words/search-for-words-in-ted-transcripts.md
               - 対訳を表示: searching-for-words/show-translation.md
@@ -82,6 +83,7 @@ plugins:
 nav:
   - Home: index.md
   - FAQ: faq.md
+  - Changelog: changelog.md
   - Searching for Words:
     - Search in transcripts: searching-for-words/search-for-words-in-ted-transcripts.md
     - Show translation: searching-for-words/show-translation.md

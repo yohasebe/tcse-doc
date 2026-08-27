@@ -72,7 +72,7 @@ The following categories of function words are excluded from the network as coll
 - Negation: *not*
 - Auxiliaries: *has, have, had, do, does, did, will, would, can, could, may, might, shall, should, must*
 - Pronouns: *it, its, this, that, there, their, they, them, he, she, him, her, his, we, our, you, your, who, which, what, how*
-- Quantifiers/determiners: *all, some, no, any, each, every, much, many, more, most, such, only*
+- Quantifiers/determiners: *all, some, no, any, each, much, many, more, most, such, only*
 - Numerals: *one* through *ten*, *first, second, third, last, next*
 - High-frequency adverbs: *also, just, even, still, back, up, out, then, too, when, where, here*
 
@@ -85,7 +85,7 @@ The network uses **lemma-based aggregation**: all inflected forms of a word are 
 - "make", "makes", "made", "making" → single node "make"
 - "great", "greater", "greatest" → single node "great"
 
-This produces cleaner, more meaningful networks by combining related forms and showing the true strength of collocational relationships across all surface variants.
+This combines related forms so that the network reflects lemma-level co-occurrence rather than individual surface forms.
 
 !!! tip "Tips"
     - Start with a content word (noun, verb, adjective) for the most informative networks

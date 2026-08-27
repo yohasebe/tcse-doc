@@ -59,8 +59,8 @@ Since v13.2.0, entity types can also constrain a **noun chunk** rather than a si
 | Query | What it finds |
 | :--- | :--- |
 | `_{%PERSON}` | Noun chunks headed by a person name |
-| `_{%PERSON\|%ORG}` | Chunks headed by a person or an organization |
-| `_{pron\|%PERSON}` | Chunks with a human referent (pronoun or person name) |
+| <code>_{%PERSON&#124;%ORG}</code> | Chunks headed by a person or an organization |
+| <code>_{pron&#124;%PERSON}</code> | Chunks with a human referent (pronoun or person name) |
 | `_{-%PERSON}` | The complement: every chunk not headed by a person name |
 
 See [Advanced Search Query Syntax](advanced-search-query-syntax.md#typed-noun-chunks-_cond) for the full chunk-condition language.

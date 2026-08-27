@@ -1,6 +1,6 @@
 # Advanced search query syntax
 
-TCSE's advanced search mode supports a rich query syntax for linguistic analysis. All annotations are produced by [spaCy](https://spacy.io/) 3.8 (`en_core_web_lg`).
+This page describes the query syntax of TCSE's advanced search mode. All annotations are produced by [spaCy](https://spacy.io/) 3.8 (`en_core_web_lg`).
 
 ## Notation
 
@@ -14,7 +14,7 @@ TCSE's advanced search mode supports a rich query syntax for linguistic analysis
 | Dependency / Tag | `{@DEP}` | `{@nsubj}`, `{@auxpass}` |
 | Morphological feature | `{#MORPH}` | `{#past}`, `{#mod}` |
 | Named entity | `%ENTITY` | `%PERSON`, `%ORG`, `%GPE` |
-| Logical OR | `A\|B` | `[news\|paper\|article]` |
+| Logical OR | <code>A&#124;B</code> | <code>[news&#124;paper&#124;article]</code> |
 | AND condition (negative) | `A&B` | `-word1&word2` |
 | Segment onset | `^` | `^ having {v}` |
 | Negative match | `-WORD` | `-rid` |
@@ -22,15 +22,15 @@ TCSE's advanced search mode supports a rich query syntax for linguistic analysis
 | Literal surface form | `['SURFACE']` | `['s]` |
 | Noun chunk placeholder | `_` | `[give] _ _` |
 | Typed noun chunk | `_{COND}` | `[give] _{pron} _` |
-| Wildcard (one word) | `-_` | `to -_ surprise` |
-| Wildcard (multiple words) | `*` | `to * surprise` |
+| Wildcard (one word) | `-_` or `{}` | `to -_ surprise` |
+| Wildcard (zero or more words) | `*` | `to * surprise` |
 
 ### Wildcards: `_` vs `-_` vs `*`
 
 | Notation | Matches | Use case |
 | :--- | :--- | :--- |
 | `_` | Exactly one **noun chunk** (may span multiple words) | `[give] _ _` matches "give the students a chance" |
-| `-_` | Exactly one **word** (any word) | `to -_ surprise` matches "to my surprise", "to our surprise" |
+| `-_` (or `{}`) | Exactly one **word** (any word) | `to -_ surprise` matches "to my surprise", "to our surprise" |
 | `*` | Zero or more words (greedy) | `to * surprise` matches "to his great surprise" |
 
 ### Typed noun chunks: `_{COND}`
@@ -40,20 +40,21 @@ Available since v13.1.0 (August 2026). A bare `_` matches any noun chunk; `_{CON
 | Query | Matches |
 | :--- | :--- |
 | `_{pron}` | a noun chunk headed by a pronoun (*me*, *them*, ...) |
-| `_{noun\|propn}` | a chunk headed by a common or proper noun |
+| <code>_{noun&#124;propn}</code> | a chunk headed by a common or proper noun |
 | `_{-pron}` | the complement: any noun chunk **not** headed by a pronoun |
 | `_{@nsubj}` | a chunk whose head bears the `nsubj` dependency |
 | `_{%PERSON}` | a chunk headed by a PERSON entity (since v13.2.0) |
 | `_{[life]}` | a chunk whose root lemma is *life* (since v13.5.0) |
+| <code>_{[part&#124;role]}</code> | a chunk whose root lemma is *part* or *role* (since v13.6.0) |
 
-- One-letter aliases work as elsewhere: `_{v}`, `_{n}`, `_{a}`, `_{pr}` etc.
-- Conditions can combine with `\|` (or), `&` (and), and `-` (negation).
+- One-letter aliases (`_{v}`, `_{n}`, `_{pr}`) work as elsewhere. Avoid `{a}`: on its own it resolves to *adverb*, but inside combined conditions (`|`, `&`) it resolves to *adjective*. Write `{adj}` or `{adv}` explicitly.
+- Conditions can combine with `|` (or), `&` (and), and `-` (negation).
 - `_{X}` and `_{-X}` partition the matches of bare `_` exactly, so complements can be used for exhaustive classification.
-- Since v13.5.0, a chunk condition can require a specific **root lemma**: `_{[life]}` matches chunks headed by the lemma *life* (*a life*, *the lives we lead*). It composes with other conditions (`_{[life]&noun}`) and can be negated (`_{-[life]}`)—e.g., `[live]{verb} _{[life]}` retrieves cognate-object pairs directly.
-- Conditions of different kinds mix freely in a disjunction: `_{pron\|%PERSON}` matches a chunk headed by a pronoun **or** belonging to a PERSON entity—a practical way to say "a human referent."
-- Named-entity types are accepted since v13.2.0 (August 2026): `_{%PERSON}` matches a chunk whose head token belongs to a PERSON entity; types can be combined with `\|` (`_{%PERSON\|%ORG}`); the complement `_{-%PERSON}` includes chunks headed by non-entity tokens. Unknown type names are rejected.
+- Since v13.5.0, a chunk condition can require a specific **root lemma**: `_{[life]}` matches chunks headed by the lemma *life* (*a life*, *the lives we lead*). It composes with other conditions (`_{[life]&noun}`) and can be negated (`_{-[life]}`)—e.g., `[live]{verb} _{[life]}` retrieves cognate-object pairs directly. Since v13.6.0 the lemma condition also accepts alternatives: `_{[part|role]}` matches chunks headed by either lemma, and `_{-[part|role]}` matches chunks headed by neither.
+- Conditions of different kinds mix freely in a disjunction: `_{pron|%PERSON}` matches a chunk headed by a pronoun **or** belonging to a PERSON entity—a practical way to say "a human referent."
+- Named-entity types are accepted since v13.2.0 (August 2026): `_{%PERSON}` matches a chunk whose head token belongs to a PERSON entity; types can be combined with `|` (`_{%PERSON|%ORG}`); the complement `_{-%PERSON}` includes chunks headed by non-entity tokens. Unknown type names are rejected.
 
-Example: `[give\|send\|tell\|show\|offer] _{pron} _` retrieves double-object (ditransitive) instances whose recipient is a pronoun; replacing `_{pron}` with `_{-pron}` retrieves all the others.
+Example: `[give|send|tell|show|offer] _{pron} _` retrieves double-object (ditransitive) instances whose recipient is a pronoun; replacing `_{pron}` with `_{-pron}` retrieves all the others.
 
 ### Lemma echo: `:N` and `=N`
 
@@ -149,7 +150,7 @@ To disambiguate *'s* (which can be *be*, *have*, or possessive), add a POS filte
 | `{n}` | nouns of any kind (except for pronouns) |
 | `{v}` | verbs of any kind |
 | `to * surprise` | *to our surprise, to his surprise,* etc. |
-| `[read] {dt} [news\|paper\|article]` | *they read these articles, reading the paper,* etc. |
+| <code>[read] {dt} [news&#124;paper&#124;article]</code> | *they read these articles, reading the paper,* etc. |
 | `^ having {v}` | *Having started the process, Having said that,* etc. |
 | `[help]{n}` | an aunt offered financial *help*, we called people for *help*, etc. |
 | `[help]{v} {p} {v}` | *helped us build*, *help you keep* away, etc. |
