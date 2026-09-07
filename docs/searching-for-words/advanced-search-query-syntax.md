@@ -79,9 +79,11 @@ Common POS tags used in queries (case-insensitive). For the complete list of all
 | `{n}` | Noun | `{v}` | Verb |
 | `{adj}` | Adjective | `{adv}` | Adverb |
 | `{p}` | Adposition (preposition) | `{dt}` | Determiner |
-| `{prp}` | Pronoun | `{conj}` | Conjunction |
+| `{pron}` / `{pr}` | Pronoun | `{cconj}` / `{sconj}` | Coordinating / subordinating conjunction |
 | `{num}` | Numeral | `{part}` | Particle |
 | `{intj}` | Interjection | `{aux}` | Auxiliary |
+
+Use `{pron}` or `{pr}` for the Universal POS category, and `{@PRP}` for the fine-grained Penn Treebank tag. These are different query conditions; `{prp}` is not a POS alias. Use `{cconj}` for coordinating conjunctions or `{sconj}` for subordinating conjunctions; `{conj}` is not a POS alias.
 
 ## Morphological Features
 
