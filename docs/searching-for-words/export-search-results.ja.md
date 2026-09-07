@@ -56,11 +56,11 @@ JSONの `metadata` とZIP内の `metadata.json` には `export_format_version` �
 | talk_id | トークID |
 | talk_title | TED Talkのタイトル |
 | speaker | スピーカー名 |
-| year | 公開年 |
+| year | トークの収録年（収録日から取得）。公開年ではありません。 |
 | video_type | トークの種類（例：「TED Stage Talk」「TEDx Talk」「TED-Ed Original」） |
 | talk_duration | トーク全体の長さ（秒） |
 | talk_url | ted.comのトークURL |
-| segment_id | セグメントの一意ID（再現性のため） |
+| segment_id | ヒットした単位のID。Segment モードではセグメントID、Sentence モードでは文ID（別のテーブル由来）が入ります。フィールド名はどちらも同じで、どちらのモードだったかはメタデータに記録されないため、モードはファイルとは別に控えてください。 |
 | match | マッチした語句（通常検索では検索語、アドバンスト・サーチでは実際の表層形） |
 | segment_text | マッチを含むセグメントの全文 |
 | segment_position | トーク内の位置（例：「42/187」） |
@@ -109,6 +109,19 @@ JSONの `metadata` とZIP内の `metadata.json` には `export_format_version` �
 - `page`: 現在のページ番号
 - `total_pages`: 総ページ数
 - `randomized`: ランダム順序かどうか（Randomizeチェックボックスがオンの場合true）
+- `export_format_version`・`search_mode`・`license`・`exported_at`
+
+### メタデータに記録されないもの
+
+エクスポートしたファイルには、同じ検索を再実行するのに必要な情報がすべて含まれているわけではありません。以下は記録されません。
+
+- 検索単位（Segment か Sentence か）
+- 選択していた翻訳言語
+- 対象にしていた動画タイプ
+- Randomize がオンのときのシード値
+- アプリケーションのバージョンとコーパスのスナップショット日
+
+そのため、設定の異なる2つのエクスポートが同じように見えることがあります。論文や共有に使うエクスポートでは、これらの設定を検索を実行した日付とあわせてファイルに添えて記録してください。バージョンとコーパスの規模は[現在のバージョン](../index.md#_1)に記載しています。
 
 誤操作防止のため、連続エクスポートには**5秒間の短いクールダウン**が適用されます。TSV/JSONボタンにホバーするとカウントダウンが表示され、タイマーが0になると自動的に再び有効になります。
 

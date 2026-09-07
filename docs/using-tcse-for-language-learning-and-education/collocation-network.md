@@ -59,7 +59,7 @@ The network applies the following filters to select meaningful collocations:
 - **Frequency**: Minimum co-occurrence frequency ≥ 3
 - **Talk count**: Minimum number of distinct talks ≥ 3 — a collocation must appear across at least 3 independent TED Talks to be included
 
-The talk count filter leverages the document-level structure of the TED corpus. Since each talk is an independent discourse event by a different speaker, collocations attested across multiple talks provide stronger evidence of genuine linguistic association than those concentrated in a single talk.
+The talk count filter uses the document-level structure of the corpus: a collocation attested in several talks is better evidence of a general pattern than one concentrated in a single talk. Note that talks are not a substitute for speakers. Some speakers have given more than one TED Talk, and the filter does not distinguish those talks from talks by different speakers.
 
 ### Stop words
 

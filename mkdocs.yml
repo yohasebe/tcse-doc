@@ -34,6 +34,7 @@ plugins:
           build: true
           nav:
             - ホーム: index.md
+            - はじめの一歩: getting-started.md
             - よくある質問: faq.md
             - 更新履歴: changelog.md
             - 語句の検索:
@@ -82,6 +83,7 @@ plugins:
 
 nav:
   - Home: index.md
+  - Getting started: getting-started.md
   - FAQ: faq.md
   - Changelog: changelog.md
   - Searching for Words:

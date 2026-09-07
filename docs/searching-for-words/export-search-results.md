@@ -56,11 +56,11 @@ Each exported hit includes:
 | talk_id | Talk ID number |
 | talk_title | Title of the TED Talk |
 | speaker | Speaker name |
-| year | Year of publication |
+| year | Year the talk was recorded, taken from its recording date. This is not the year the talk was published. |
 | video_type | Talk type (e.g., "TED Stage Talk", "TEDx Talk", "TED-Ed Original") |
 | talk_duration | Total talk duration in seconds |
 | talk_url | URL to the talk on ted.com |
-| segment_id | Unique segment ID (for reproducibility) |
+| segment_id | ID of the unit that matched. In Segment mode this is a segment ID; in Sentence mode it is a sentence ID, which comes from a different table. The field name is the same in both cases, and the metadata does not record which mode was used, so keep a note of the mode alongside the file. |
 | match | Matched word/phrase (search query for regular search; actual surface form for advanced search) |
 | segment_text | Full segment text containing the match |
 | segment_position | Position in talk (e.g., "42/187") |
@@ -109,6 +109,19 @@ The metadata includes:
 - `page`: Current page number
 - `total_pages`: Total number of pages
 - `randomized`: Whether results are in random order (true if the Randomize checkbox is on)
+- `export_format_version`, `search_mode`, `license` and `exported_at`
+
+### What the metadata does not record
+
+An exported file does not carry everything needed to run the same search again. It does not record:
+
+- the search unit (Segment or Sentence)
+- the translation language, if one was selected
+- which video types were included
+- the random seed, when Randomize is on
+- the application version and the date of the corpus snapshot
+
+Two exports made from different settings can therefore look alike. When an export matters for a publication or for sharing, record these settings with the file, together with the date you ran the search. The version and corpus size are shown under [Current version](../index.md#current-version).
 
 A short **5-second cooldown** applies between consecutive exports to prevent accidental double-clicks. The TSV/JSON buttons show a countdown tooltip on hover and automatically re-enable when the timer reaches zero.
 

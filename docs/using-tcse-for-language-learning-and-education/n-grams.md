@@ -10,10 +10,14 @@ An n-gram is a sequence of words of *n* items. Looking at frequencies of various
 
 TCSE offers four n-gram sizes:
 
-- **1-gram**: Single word frequencies
-- **2-gram**: Two-word sequences (bigrams)
-- **3-gram**: Three-word sequences (trigrams)
-- **4-gram**: Four-word sequences
+- **1-gram**: Frequencies of single items
+- **2-gram**: Sequences of two items (bigrams)
+- **3-gram**: Sequences of three items (trigrams)
+- **4-gram**: Sequences of four items
+
+Here *n* counts **items, not words**. A noun phrase chunk counts as one item, so a 1-gram can be several words long — *the united states* and *new york* both appear in the 1-gram table. This is why some rows in the results are wider than *n* words; see [Chunk-based n-grams](#chunk-based-n-grams) below.
+
+The **Colloc** and **Network** tabs use a separate word-level series in which every item is a single word. The two series therefore give different frequencies for the same string.
 
 Here is a sample output returned in response to the search key *wait*:
 
