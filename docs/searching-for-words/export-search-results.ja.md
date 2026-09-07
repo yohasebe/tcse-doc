@@ -31,12 +31,21 @@
 
 ```json
 {
-  "metadata": { "query": "...", "total_hits": 1234, ... },
+  "metadata": { "export_format_version": 2, "query": "...", "total_hits": 1234, ... },
   "data": [ { "talk_id": 1, "match": "...", ... }, ... ]
 }
 ```
 
 **Python**、**R**などのプログラミング言語で処理するのに最適です。
+
+## エクスポート形式のバージョンと互換性
+
+JSONの `metadata` とZIP内の `metadata.json` には `export_format_version` が含まれます。バージョン **2** では、検索結果やその順序を変えずに、次の2点を訂正しました。
+
+- `context_before_1` は直前のセグメント、`context_before_2` は2つ前のセグメントです。`translation_context_before_1` と `translation_context_before_2` も同じ順序です。トーク先頭で前方の文脈が存在しない場合は空文字列になります。拡張セグメントモードでは、これらの項目も拡張セグメント単位です。
+- 対訳言語を選択した場合の `translation_lang` は、JSON・TSVともに `"ja"` などの言語コードの文字列です。英語のみのエクスポートには翻訳項目を含めません。
+
+`export_format_version` のないファイルは、バージョン番号のない旧形式です。旧形式では2つの `context_before_*` の内容が逆になっており、`translation_context_before_*` も同様でした。また、`translation_lang` はJSONではオブジェクト、TSVではRubyのハッシュ表現になっていました。新旧のファイルを併用するときは、バージョンを確認してこれらの項目を揃えるか、結果を再度エクスポートしてください。`context_after_*` と `translation_context_after_*` の内容は変更していません。
 
 ## データ項目
 
@@ -78,7 +87,7 @@
 
 | 項目 | 説明 |
 | :--- | :--- |
-| translation_lang | 翻訳言語コード |
+| translation_lang | 翻訳言語コードの文字列（例: `"ja"`） |
 | translation_segment | マッチしたセグメントの翻訳テキスト |
 | translation_context_before_1 | 1つ前のセグメントの翻訳 |
 | translation_context_before_2 | 2つ前のセグメントの翻訳 |
