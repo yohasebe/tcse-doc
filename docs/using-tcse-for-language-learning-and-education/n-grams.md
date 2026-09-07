@@ -4,7 +4,7 @@ You can look at n-grams of words in TED Talks. Click on the **Collocation** butt
 
 ![Collocation mode on the main page](images/06.png){ width="600" }
 
-An n-gram is a sequence of words of *n* items. Looking at frequencies of various n-grams, you can find out what linguistic sequences are more entrenched in the language and, possibly, what are less so.
+An n-gram is a sequence of *n* consecutive items. Looking at the frequencies of n-grams tells you which sequences are well established in the language and which are not. In these tabs an item is a chunk rather than a word; the next section says what that changes.
 
 ## N-gram tabs
 
@@ -17,7 +17,7 @@ TCSE offers four n-gram sizes:
 
 Here *n* counts **items, not words**. A noun phrase chunk counts as one item, so a 1-gram can be several words long — *the united states* and *new york* both appear in the 1-gram table. This is why some rows in the results are wider than *n* words; see [Chunk-based n-grams](#chunk-based-n-grams) below.
 
-The **Colloc** and **Network** tabs use a separate word-level series in which every item is a single word. The two series therefore give different frequencies for the same string.
+The **Colloc** and **Network** tabs use a separate word-level series in which every item is a single word. Because the two series count different units, the frequency of the same string can differ between them.
 
 Here is a sample output returned in response to the search key *wait*:
 

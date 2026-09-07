@@ -113,13 +113,14 @@ The metadata includes:
 
 ### What the metadata does not record
 
-An exported file does not carry everything needed to run the same search again. It does not record:
+The metadata object does not carry everything needed to run the same search again. It does not record:
 
 - the search unit (Segment or Sentence)
-- the translation language, if one was selected
 - which video types were included
 - the random seed, when Randomize is on
 - the application version and the date of the corpus snapshot
+
+The translation language is absent from the metadata but present on every hit, as `translation_lang`, whenever a translation language was selected.
 
 Two exports made from different settings can therefore look alike. When an export matters for a publication or for sharing, record these settings with the file, together with the date you ran the search. The version and corpus size are shown under [Current version](../index.md#current-version).
 

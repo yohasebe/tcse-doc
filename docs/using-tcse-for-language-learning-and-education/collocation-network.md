@@ -57,7 +57,7 @@ The network applies the following filters to select meaningful collocations:
 
 - **MI threshold**: Minimum Mutual Information score (default ≥ 3, with automatic fallback to ≥ 2)
 - **Frequency**: Minimum co-occurrence frequency ≥ 3
-- **Talk count**: Minimum number of distinct talks ≥ 3 — a collocation must appear across at least 3 independent TED Talks to be included
+- **Talk count**: Talk count ≥ 3 — a collocation must appear in at least 3 distinct TED Talks to be included. The value compared against the threshold is the largest talk count among the grouped rows, as on the Colloc tabs
 
 The talk count filter uses the document-level structure of the corpus: a collocation attested in several talks is better evidence of a general pattern than one concentrated in a single talk. Note that talks are not a substitute for speakers. Some speakers have given more than one TED Talk, and the filter does not distinguish those talks from talks by different speakers.
 

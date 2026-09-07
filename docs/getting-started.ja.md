@@ -10,22 +10,21 @@ TCSE は TED Talks のトランスクリプトを検索します。ヒットし�
 
 表の各行が1件のヒットです。どのトークのものか、トークのどこに出てくるか、そして検索語を目立たせた前後のテキストが表示されます。トランスクリプトは**セグメント**（字幕1画面分にほぼ相当）に分割されており、既定ではセグメントを文の切れ目まで広げて読みやすくしています。結果は200件ずつのページに分かれます。
 
-結果は既定でランダム順に表示されます。毎回同じトークばかりが上に来ないようにするためです。順序を固定したい場合は、設定パネルの **Randomize Result Order** をオフにしてください。詳しくは[トランスクリプトを検索](searching-for-words/search-for-words-in-ted-transcripts.md)を参照してください。
+結果は既定でランダム順に表示されます。1ページ目がいつもコーパスの同じ一角から取られることを避けるためです。順序自体は固定で、同じ条件・同じシードなら同じ行が同じ並びで返ります。別の標本を見るには **Random seed** のスライダを動かしてから検索し直してください。データベース順にしたい場合は **Randomize Result Order** をオフにします。詳しくは[トランスクリプトを検索](searching-for-words/search-for-words-in-ted-transcripts.md)を参照してください。
 
 ## 2. ヒットを開く
 
 各行のアイコンから、表の外へ進めます。
 
-- そのセグメントから動画を再生する → [セグメントを再生](playing-video/play-a-segment-of-a-talk.md)
+- そのセグメントから動画を再生する → [セグメントを再生](playing-video/play-a-segment-of-a-talk.md)。ブラウザの設定によっては、プレイヤーを一度クリックするまで音が出ないことがあります
 - トークの[全文を読む](obtaining-information-about-talks/show-transcripts-in-full-length.md)
-- そのセグメントが[トークのどのあたりか](obtaining-information-about-talks/check-location-of-a-segment.md)を見る
-- セグメントを[そこへ戻れるリンク付きで](using-tcse-for-language-learning-and-education/get-unique-url-of-a-segment.md)コピーする
+- [そのセグメントのURL](using-tcse-for-language-learning-and-education/get-unique-url-of-a-segment.md)をコピーする。開くとその瞬間から動画が再生されます
 
-トークのタイトルをクリックすると、[そのトークの情報](obtaining-information-about-talks/find-basic-information-about-a-talk.md)が表示されます。
+各行にはトークのID番号と、トーク内でのセグメントの位置も表示されます。ID番号をクリックすると[そのトークの情報](obtaining-information-about-talks/find-basic-information-about-a-talk.md)が表示され、位置の数値から[トークのどのあたりか](obtaining-information-about-talks/check-location-of-a-segment.md)が分かります。
 
 ## 3. 翻訳を表示する
 
-**Translation** セレクタで言語を選ぶと、各ヒットと動画に翻訳が表示されます。翻訳は TED のボランティアによるものなので、収録状況はトークによって異なります。詳しくは[対訳を表示](searching-for-words/show-translation.md)を参照してください。
+**Translation** セレクタで言語を選び、もう一度 **SEARCH** を押してください。翻訳は画面に出ている結果を生んだ検索に属するので、セレクタを変えただけでは現在の結果は変わりません。検索し直すと、各ヒットと動画に翻訳が表示されます。翻訳は TED のボランティアによるものなので、収録状況はトークによって異なります。詳しくは[対訳を表示](searching-for-words/show-translation.md)を参照してください。
 
 ## 次に読むもの
 

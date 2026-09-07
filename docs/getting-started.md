@@ -10,22 +10,21 @@ Type a word into the box at the top of [the main page](https://yohasebe.com/tcse
 
 Each row in the table is one hit: the talk it comes from, where in the talk it occurs, and the text around it with your word marked. Transcripts are divided into **segments**, roughly one screen of subtitles; by default TCSE extends each segment to sentence boundaries so that a hit is easier to read. Results are paginated 200 at a time.
 
-Results appear in a random order by default, so that you see a range of talks rather than the same ones every time. If you want a fixed order, turn **Randomize Result Order** off in the settings panel. See [Search in transcripts](searching-for-words/search-for-words-in-ted-transcripts.md).
+Results appear in a random order by default, so that the first page is not always drawn from the same corner of the corpus. The order is still fixed: the same query with the same seed returns the same rows in the same sequence. To see a different sample, move the **Random seed** slider and search again, or turn **Randomize Result Order** off for the database order. See [Search in transcripts](searching-for-words/search-for-words-in-ted-transcripts.md).
 
 ## 2. Open a hit
 
 The icons on each row lead out of the table:
 
-- play the video from that segment — see [Play a segment](playing-video/play-a-segment-of-a-talk.md)
+- play the video from that segment — see [Play a segment](playing-video/play-a-segment-of-a-talk.md). The browser may block sound until you click the player once
 - read the [full transcript](obtaining-information-about-talks/show-transcripts-in-full-length.md) of the talk
-- see [where the segment falls](obtaining-information-about-talks/check-location-of-a-segment.md) in the talk
-- copy the segment, with a [link back to it](using-tcse-for-language-learning-and-education/get-unique-url-of-a-segment.md)
+- copy the [segment's URL](using-tcse-for-language-learning-and-education/get-unique-url-of-a-segment.md), which reopens the video at that moment
 
-Clicking the talk title shows [information about the talk](obtaining-information-about-talks/find-basic-information-about-a-talk.md).
+Each row also carries the talk's ID number and the position of the segment within the talk. Clicking the ID number shows [information about the talk](obtaining-information-about-talks/find-basic-information-about-a-talk.md); the position tells you [where the segment falls](obtaining-information-about-talks/check-location-of-a-segment.md).
 
 ## 3. Show a translation
 
-Choose a language from the **Translation** selector and the translated text appears with each hit, and on the video. TCSE carries the translations that TED volunteers have contributed, so coverage differs from talk to talk. See [Show translation](searching-for-words/show-translation.md).
+Choose a language from the **Translation** selector and click **SEARCH** again. The translation belongs to the search that produced the rows on screen, so changing the selector alone leaves the current results as they are. After the new search the translated text appears with each hit and on the video. TCSE carries the translations that TED volunteers have contributed, so coverage differs from talk to talk. See [Show translation](searching-for-words/show-translation.md).
 
 ## Where to go next
 

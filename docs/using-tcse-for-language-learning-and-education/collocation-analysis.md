@@ -28,19 +28,23 @@ You can sort collocation results by different statistical measures:
 
 ## Lemma-based grouping
 
-Collocation results are **grouped by lemma** (base form). This means that all inflected forms of a word are combined into a single entry. For example, searching for "make" will show:
+Collocation results are **grouped by lemma** (base form), so the inflected forms of a pair appear as one entry. Searching for *make* in Colloc 2 gives, among others:
 
-- *make + mistake* — combining "make a mistake", "makes mistakes", "made a mistake", etc.
-- *make + decision* — combining all inflected forms
+- *make + mistake* — combining *make mistakes*, *makes mistakes*, *made mistakes* and *making mistakes*
+- *make + decision* — combining the inflected forms of the same two words
 
-The frequency shown for each pair is the sum over these forms. Hover over a lemma to see the surface forms that were aggregated. Click on a row to search for all instances using lemma search syntax.
+The frequency shown for each pair is the sum over those forms. Hover over a lemma to see the surface forms that were aggregated. Click on a row to search for all instances using lemma search syntax.
+
+Colloc 2 counts **adjacent** pairs, so *make a mistake* is not part of *make + mistake*: the article sits between the two words, which puts that phrase in the three-word series behind Colloc 3.
 
 ### What the numbers cover
 
-- A surface form enters the group only if it occurs at least 3 times in at least 2 talks. That threshold is applied before grouping, so **Freq** is the sum over the forms that pass it, not over every form.
-- **Talks** is the largest talk count among the grouped forms, not the number of distinct talks that contain any of them. It can be lower than that number.
-- The list is built by taking the 500 most frequent candidates and ranking those by the measure you choose. It is not the top of the whole corpus by MI, t-score or DP.
-- **DP** for a grouped row is the average of the DP values of its surface forms, not DP recalculated on the combined distribution.
+- The rows that are grouped are the corpus's n-gram rows, one per word/lemma/part-of-speech combination, so the same written form can contribute more than one row.
+- A row enters the group only if it occurs at least 3 times in at least 2 talks. That threshold is applied before grouping, so **Freq** is the sum over the rows that pass it, not over every row.
+- **Talks** is the largest talk count among the grouped rows, not the number of distinct talks that contain any of them. It can be lower than that number.
+- The list is built by taking the 500 most frequent candidates, ranking those by the measure you choose, and showing at most 100. It is not the top of the whole corpus by MI, t-score or DP.
+- **DP** for a grouped row is the plain mean of the DP values of the grouped rows, not weighted by frequency and not recalculated on the combined distribution.
+- Grouping happens after the search term is matched, so entering an inflected form such as *makes* collects the rows that matched *makes*, not every form of *make*. Enter the base form to see them all.
 
 ## Collocation network
 
