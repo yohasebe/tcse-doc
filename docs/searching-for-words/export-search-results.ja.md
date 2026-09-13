@@ -1,8 +1,5 @@
 # 検索結果のエクスポート
 
-!!! info "ベータ機能"
-    この機能はベータ版です。TCSEのウェブサイトで利用可能ですが、ユーザーのフィードバックに基づいてインターフェースやデータ項目が変更される可能性があります。フィードバックを歓迎します。
-
 トークン検索の結果を構造化データファイルとしてエクスポートし、言語研究・統計分析・その他の処理に活用できます。
 
 ## エクスポート方法
@@ -31,7 +28,7 @@
 
 ```json
 {
-  "metadata": { "export_format_version": 2, "query": "...", "total_hits": 1234, ... },
+  "metadata": { "export_format_version": 3, "query": "...", "total_hits": 1234, ... },
   "data": [ { "talk_id": 1, "match": "...", ... }, ... ]
 }
 ```
@@ -44,6 +41,17 @@ JSONの `metadata` とZIP内の `metadata.json` には `export_format_version` �
 
 - `context_before_1` は直前のセグメント、`context_before_2` は2つ前のセグメントです。`translation_context_before_1` と `translation_context_before_2` も同じ順序です。トーク先頭で前方の文脈が存在しない場合は空文字列になります。拡張セグメントモードでは、これらの項目も拡張セグメント単位です。
 - 対訳言語を選択した場合の `translation_lang` は、JSON・TSVともに `"ja"` などの言語コードの文字列です。英語のみのエクスポートには翻訳項目を含めません。
+
+バージョン **3** では、ファイルの出どころを示す4つのメタデータオブジェクトが加わります。検索結果とその順序はバージョン2から変わっていません。
+
+| オブジェクト | 内容 |
+| :--- | :--- |
+| `corpus` | `talks`（コーパスのトーク数）、`updated_at`（コーパスのデータが最後に変わった日時・UTC）、`updating`（データ更新中なら `true`） |
+| `app_version` | サイトに表示されているアプリケーションのバージョン |
+| `conditions` | 実行された検索の条件: `text`、`advanced`、`search`、`if_talk`、`target`、`translation_language`（言語コードまたは `null`）、`video_types`（コードではなく名前）、`allow_en_only`、`randomize`、`seed`、`offset`、`uilang` |
+| `observation` | `total_hits` とその単位 `count_unit`（アドバンスト・サーチでは `match_start`、それ以外は `segment` か `sentence`）、`returned_rows` とその単位 `row_unit`、`page`、`page_size`、`evaluated_at`（UTC） |
+
+`total_hits` は条件ではなく観測値です。アドバンスト・サーチでは一致の開始トークンの異なり数を数え、行はセグメントまたは文の単位で重複を除くため、2つの数値は単位が違います。
 
 `export_format_version` のないファイルは、バージョン番号のない旧形式です。旧形式では2つの `context_before_*` の内容が逆になっており、`translation_context_before_*` も同様でした。また、`translation_lang` はJSONではオブジェクト、TSVではRubyのハッシュ表現になっていました。新旧のファイルを併用するときは、バージョンを確認してこれらの項目を揃えるか、結果を再度エクスポートしてください。`context_after_*` と `translation_context_after_*` の内容は変更していません。
 

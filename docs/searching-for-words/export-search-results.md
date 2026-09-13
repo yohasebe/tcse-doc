@@ -1,8 +1,5 @@
 # Export search results
 
-!!! info "Beta feature"
-    This feature is in beta. It is available on the TCSE website, but the interface and data fields may change based on user feedback. Feedback is welcome.
-
 You can export token search results as structured data files for use in linguistic research, statistical analysis, or further processing.
 
 ## How to export
@@ -31,7 +28,7 @@ Downloads a single JSON file containing both metadata and data in a structured f
 
 ```json
 {
-  "metadata": { "export_format_version": 2, "query": "...", "total_hits": 1234, ... },
+  "metadata": { "export_format_version": 3, "query": "...", "total_hits": 1234, ... },
   "data": [ { "talk_id": 1, "match": "...", ... }, ... ]
 }
 ```
@@ -44,6 +41,17 @@ The JSON `metadata` object and the ZIP's `metadata.json` include `export_format_
 
 - `context_before_1` is the immediately preceding segment; `context_before_2` is two segments before the hit. The same numbering applies to `translation_context_before_1` and `translation_context_before_2`. Missing context at the beginning of a talk is an empty string. In expanded-segment mode, these fields refer to expanded segments.
 - When a translation language is selected, `translation_lang` is a language-code string, such as `"ja"`, in both JSON and TSV. English-only exports omit translation fields.
+
+Version **3** adds four metadata objects that say where the file came from. Search results and their order are unchanged from version 2.
+
+| Object | Contents |
+| :--- | :--- |
+| `corpus` | `talks` (number of talks in the corpus), `updated_at` (when the corpus data last changed, UTC), `updating` (`true` while a data update is in progress) |
+| `app_version` | The application version shown on the site |
+| `conditions` | The search as it was executed: `text`, `advanced`, `search`, `if_talk`, `target`, `translation_language` (language code or `null`), `video_types` (names, not codes), `allow_en_only`, `randomize`, `seed`, `offset`, `uilang` |
+| `observation` | `total_hits` and its `count_unit` (`match_start` for Advanced Search, otherwise `segment` or `sentence`), `returned_rows` and its `row_unit`, `page`, `page_size`, `evaluated_at` (UTC) |
+
+`total_hits` is an observation, not a condition: in Advanced Search it counts distinct matching start tokens, while the rows are deduplicated per segment or sentence, so the two numbers use different units.
 
 Exports without `export_format_version` use the legacy, unversioned format. In those files, the two `context_before_*` fields were reversed, as were the two `translation_context_before_*` fields. The `translation_lang` field contained an object in JSON and a Ruby hash representation in TSV. When combining old and new exports, check the version and normalize these fields, or export the results again. The `context_after_*` and `translation_context_after_*` fields have not changed.
 
