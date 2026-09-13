@@ -130,79 +130,79 @@ Syntactic dependency relations showing how words relate to each other in a sente
 
 | Label | Description | Example |
 | :--- | :--- | :--- |
-| `nsubj` | Nominal subject | ***She** runs.* |
-| `nsubjpass` | Nominal subject (passive) | ***It** was built.* |
-| `dobj` | Direct object | *I see **you**.* |
-| `dative` | Dative (indirect object) | *Give **me** a book.* |
-| `attr` | Attribute | *She is **a teacher**.* |
-| `agent` | Agent (passive by-phrase) | *Built **by engineers**.* |
-| `expl` | Expletive | ***There** is a problem.* |
+| `nsubj` | Nominal subject | <strong>*She</strong> runs.* |
+| `nsubjpass` | Nominal subject (passive) | <strong>*It</strong> was built.* |
+| `dobj` | Direct object | *I see <strong>you</strong>.* |
+| `dative` | Dative (indirect object) | *Give <strong>me</strong> a book.* |
+| `attr` | Attribute | *She is <strong>a teacher</strong>.* |
+| `agent` | Agent (passive by-phrase) | *Built <strong>by engineers</strong>.* |
+| `expl` | Expletive | <strong>*There</strong> is a problem.* |
 
 ### Clausal Arguments
 
 | Label | Description | Example |
 | :--- | :--- | :--- |
-| `csubj` | Clausal subject | ***What she said** is true.* |
-| `csubjpass` | Clausal subject (passive) | ***That he came** was unexpected.* |
-| `ccomp` | Clausal complement | *I think **he left**.* |
-| `xcomp` | Open clausal complement | *I want **to go**.* |
-| `acomp` | Adjectival complement | *She looks **happy**.* |
-| `oprd` | Object predicate | *I consider him **smart**.* |
+| `csubj` | Clausal subject | <strong>*What she said</strong> is true.* |
+| `csubjpass` | Clausal subject (passive) | <strong>*That he came</strong> was unexpected.* |
+| `ccomp` | Clausal complement | *I think <strong>he left</strong>.* |
+| `xcomp` | Open clausal complement | *I want <strong>to go</strong>.* |
+| `acomp` | Adjectival complement | *She looks <strong>happy</strong>.* |
+| `oprd` | Object predicate | *I consider him <strong>smart</strong>.* |
 
 ### Modifiers
 
 | Label | Description | Example |
 | :--- | :--- | :--- |
-| `amod` | Adjectival modifier | *a **big** house* |
-| `advmod` | Adverbial modifier | *run **quickly*** |
-| `nummod` | Numeric modifier | ***three** cats* |
-| `nmod` | Nominal modifier | *a cup of **coffee*** |
-| `npadvmod` | Noun phrase as adverbial modifier | ***yesterday**, **this way*** |
-| `quantmod` | Quantifier modifier | *about **200*** |
-| `appos` | Appositional modifier | *Sam, **my brother*** |
-| `acl` | Adjectival/relative clause | *the man **who came*** |
-| `relcl` | Relative clause modifier | *the book **I read*** |
-| `advcl` | Adverbial clause modifier | ***If it rains**, I stay.* |
-| `neg` | Negation modifier | *I do **not** agree.* |
-| `det` | Determiner | ***the** book* |
-| `predet` | Predeterminer | ***all** the people* |
-| `poss` | Possession modifier | ***my** book* |
+| `amod` | Adjectival modifier | *a <strong>big</strong> house* |
+| `advmod` | Adverbial modifier | *run <strong>quickly</strong>* |
+| `nummod` | Numeric modifier | <strong>*three</strong> cats* |
+| `nmod` | Nominal modifier | *a cup of <strong>coffee</strong>* |
+| `npadvmod` | Noun phrase as adverbial modifier | <strong>*yesterday</strong>, <strong>this way</strong>* |
+| `quantmod` | Quantifier modifier | *about <strong>200</strong>* |
+| `appos` | Appositional modifier | *Sam, <strong>my brother</strong>* |
+| `acl` | Adjectival/relative clause | *the man <strong>who came</strong>* |
+| `relcl` | Relative clause modifier | *the book <strong>I read</strong>* |
+| `advcl` | Adverbial clause modifier | <strong>*If it rains</strong>, I stay.* |
+| `neg` | Negation modifier | *I do <strong>not</strong> agree.* |
+| `det` | Determiner | <strong>*the</strong> book* |
+| `predet` | Predeterminer | <strong>*all</strong> the people* |
+| `poss` | Possession modifier | <strong>*my</strong> book* |
 
 ### Prepositional & Case
 
 | Label | Description | Example |
 | :--- | :--- | :--- |
-| `prep` | Prepositional modifier | *go **to** school* |
-| `pobj` | Object of preposition | *in the **house*** |
-| `pcomp` | Complement of preposition | *instead of **going*** |
-| `case` | Case marking | *John **'s** book* |
+| `prep` | Prepositional modifier | *go <strong>to</strong> school* |
+| `pobj` | Object of preposition | *in the <strong>house</strong>* |
+| `pcomp` | Complement of preposition | *instead of <strong>going</strong>* |
+| `case` | Case marking | *John <strong>'s</strong> book* |
 
 ### Coordination & Connectors
 
 | Label | Description | Example |
 | :--- | :--- | :--- |
-| `conj` | Conjunct | *cats and **dogs*** |
-| `cc` | Coordinating conjunction | *cats **and** dogs* |
-| `preconj` | Pre-correlative conjunction | ***either** A or B* |
-| `mark` | Marker (subordinating conjunction) | ***because** it rained* |
+| `conj` | Conjunct | *cats and <strong>dogs</strong>* |
+| `cc` | Coordinating conjunction | *cats <strong>and</strong> dogs* |
+| `preconj` | Pre-correlative conjunction | <strong>*either</strong> A or B* |
+| `mark` | Marker (subordinating conjunction) | <strong>*because</strong> it rained* |
 
 ### Verbal
 
 | Label | Description | Example |
 | :--- | :--- | :--- |
-| `aux` | Auxiliary | *I **have** eaten.* |
-| `auxpass` | Passive auxiliary | *It **was** built.* |
-| `compound` | Compound | ***New** York, **ice** cream* |
-| `prt` | Particle (phrasal verb) | *give **up**, turn **off*** |
+| `aux` | Auxiliary | *I <strong>have</strong> eaten.* |
+| `auxpass` | Passive auxiliary | *It <strong>was</strong> built.* |
+| `compound` | Compound | <strong>*New</strong> York, <strong>ice</strong> cream* |
+| `prt` | Particle (phrasal verb) | *give <strong>up</strong>, turn <strong>off</strong>* |
 
 ### Other
 
 | Label | Description | Example |
 | :--- | :--- | :--- |
-| `ROOT` | Root of the sentence | *She **runs** fast.* |
-| `punct` | Punctuation | *Hello**,** world**.*** |
-| `parataxis` | Parataxis (loosely joined clause) | *He said — **I agree**.* |
-| `intj` | Interjection | ***Well**, I think...* |
+| `ROOT` | Root of the sentence | *She <strong>runs</strong> fast.* |
+| `punct` | Punctuation | *Hello<strong>,</strong> world<strong>.</strong>* |
+| `parataxis` | Parataxis (loosely joined clause) | *He said — <strong>I agree</strong>.* |
+| `intj` | Interjection | <strong>*Well</strong>, I think...* |
 | `dep` | Unclassified dependent | *(catch-all)* |
 | `meta` | Meta modifier | *structural markup* |
 

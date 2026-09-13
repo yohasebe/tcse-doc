@@ -130,79 +130,79 @@ TCSEのすべてのトランスクリプトデータは、[spaCy](https://spacy.
 
 | ラベル | 説明 | 例 |
 | :--- | :--- | :--- |
-| `nsubj` | 主語（名詞） | ***She** runs.* |
-| `nsubjpass` | 主語（受動態） | ***It** was built.* |
-| `dobj` | 直接目的語 | *I see **you**.* |
-| `dative` | 与格（間接目的語） | *Give **me** a book.* |
-| `attr` | 属性 | *She is **a teacher**.* |
-| `agent` | 動作主（受動態のby句） | *Built **by engineers**.* |
-| `expl` | 虚辞 | ***There** is a problem.* |
+| `nsubj` | 主語（名詞） | <strong>*She</strong> runs.* |
+| `nsubjpass` | 主語（受動態） | <strong>*It</strong> was built.* |
+| `dobj` | 直接目的語 | *I see <strong>you</strong>.* |
+| `dative` | 与格（間接目的語） | *Give <strong>me</strong> a book.* |
+| `attr` | 属性 | *She is <strong>a teacher</strong>.* |
+| `agent` | 動作主（受動態のby句） | *Built <strong>by engineers</strong>.* |
+| `expl` | 虚辞 | <strong>*There</strong> is a problem.* |
 
 ### 節項
 
 | ラベル | 説明 | 例 |
 | :--- | :--- | :--- |
-| `csubj` | 節主語 | ***What she said** is true.* |
-| `csubjpass` | 節主語（受動態） | ***That he came** was unexpected.* |
-| `ccomp` | 節補語 | *I think **he left**.* |
-| `xcomp` | 開放節補語 | *I want **to go**.* |
-| `acomp` | 形容詞補語 | *She looks **happy**.* |
-| `oprd` | 目的語述語 | *I consider him **smart**.* |
+| `csubj` | 節主語 | <strong>*What she said</strong> is true.* |
+| `csubjpass` | 節主語（受動態） | <strong>*That he came</strong> was unexpected.* |
+| `ccomp` | 節補語 | *I think <strong>he left</strong>.* |
+| `xcomp` | 開放節補語 | *I want <strong>to go</strong>.* |
+| `acomp` | 形容詞補語 | *She looks <strong>happy</strong>.* |
+| `oprd` | 目的語述語 | *I consider him <strong>smart</strong>.* |
 
 ### 修飾語
 
 | ラベル | 説明 | 例 |
 | :--- | :--- | :--- |
-| `amod` | 形容詞修飾語 | *a **big** house* |
-| `advmod` | 副詞修飾語 | *run **quickly*** |
-| `nummod` | 数量修飾語 | ***three** cats* |
-| `nmod` | 名詞修飾語 | *a cup of **coffee*** |
-| `npadvmod` | 名詞句による副詞的修飾語 | ***yesterday**, **this way*** |
-| `quantmod` | 量化修飾語 | *about **200*** |
-| `appos` | 同格 | *Sam, **my brother*** |
-| `acl` | 形容詞節・関係節 | *the man **who came*** |
-| `relcl` | 関係節修飾語 | *the book **I read*** |
-| `advcl` | 副詞節修飾語 | ***If it rains**, I stay.* |
-| `neg` | 否定修飾語 | *I do **not** agree.* |
-| `det` | 限定詞 | ***the** book* |
-| `predet` | 前限定詞 | ***all** the people* |
-| `poss` | 所有修飾語 | ***my** book* |
+| `amod` | 形容詞修飾語 | *a <strong>big</strong> house* |
+| `advmod` | 副詞修飾語 | *run <strong>quickly</strong>* |
+| `nummod` | 数量修飾語 | <strong>*three</strong> cats* |
+| `nmod` | 名詞修飾語 | *a cup of <strong>coffee</strong>* |
+| `npadvmod` | 名詞句による副詞的修飾語 | <strong>*yesterday</strong>, <strong>this way</strong>* |
+| `quantmod` | 量化修飾語 | *about <strong>200</strong>* |
+| `appos` | 同格 | *Sam, <strong>my brother</strong>* |
+| `acl` | 形容詞節・関係節 | *the man <strong>who came</strong>* |
+| `relcl` | 関係節修飾語 | *the book <strong>I read</strong>* |
+| `advcl` | 副詞節修飾語 | <strong>*If it rains</strong>, I stay.* |
+| `neg` | 否定修飾語 | *I do <strong>not</strong> agree.* |
+| `det` | 限定詞 | <strong>*the</strong> book* |
+| `predet` | 前限定詞 | <strong>*all</strong> the people* |
+| `poss` | 所有修飾語 | <strong>*my</strong> book* |
 
 ### 前置詞・格
 
 | ラベル | 説明 | 例 |
 | :--- | :--- | :--- |
-| `prep` | 前置詞修飾語 | *go **to** school* |
-| `pobj` | 前置詞の目的語 | *in the **house*** |
-| `pcomp` | 前置詞の補語 | *instead of **going*** |
-| `case` | 格標示 | *John **'s** book* |
+| `prep` | 前置詞修飾語 | *go <strong>to</strong> school* |
+| `pobj` | 前置詞の目的語 | *in the <strong>house</strong>* |
+| `pcomp` | 前置詞の補語 | *instead of <strong>going</strong>* |
+| `case` | 格標示 | *John <strong>'s</strong> book* |
 
 ### 等位接続・接続
 
 | ラベル | 説明 | 例 |
 | :--- | :--- | :--- |
-| `conj` | 等位要素 | *cats and **dogs*** |
-| `cc` | 等位接続詞 | *cats **and** dogs* |
-| `preconj` | 前相関接続詞 | ***either** A or B* |
-| `mark` | 標識（従位接続詞） | ***because** it rained* |
+| `conj` | 等位要素 | *cats and <strong>dogs</strong>* |
+| `cc` | 等位接続詞 | *cats <strong>and</strong> dogs* |
+| `preconj` | 前相関接続詞 | <strong>*either</strong> A or B* |
+| `mark` | 標識（従位接続詞） | <strong>*because</strong> it rained* |
 
 ### 動詞関連
 
 | ラベル | 説明 | 例 |
 | :--- | :--- | :--- |
-| `aux` | 助動詞 | *I **have** eaten.* |
-| `auxpass` | 受動態助動詞 | *It **was** built.* |
-| `compound` | 複合語 | ***New** York, **ice** cream* |
-| `prt` | 小辞（句動詞） | *give **up**, turn **off*** |
+| `aux` | 助動詞 | *I <strong>have</strong> eaten.* |
+| `auxpass` | 受動態助動詞 | *It <strong>was</strong> built.* |
+| `compound` | 複合語 | <strong>*New</strong> York, <strong>ice</strong> cream* |
+| `prt` | 小辞（句動詞） | *give <strong>up</strong>, turn <strong>off</strong>* |
 
 ### その他
 
 | ラベル | 説明 | 例 |
 | :--- | :--- | :--- |
-| `ROOT` | 文の根 | *She **runs** fast.* |
-| `punct` | 句読点 | *Hello**,** world**.*** |
-| `parataxis` | 並列構造（ゆるい節接続） | *He said — **I agree**.* |
-| `intj` | 間投詞 | ***Well**, I think...* |
+| `ROOT` | 文の根 | *She <strong>runs</strong> fast.* |
+| `punct` | 句読点 | *Hello<strong>,</strong> world<strong>.</strong>* |
+| `parataxis` | 並列構造（ゆるい節接続） | *He said — <strong>I agree</strong>.* |
+| `intj` | 間投詞 | <strong>*Well</strong>, I think...* |
 | `dep` | 未分類の依存要素 | *（包括的カテゴリ）* |
 | `meta` | メタ修飾語 | *構造的マークアップ* |
 
