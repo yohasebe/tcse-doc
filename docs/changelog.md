@@ -11,6 +11,7 @@ Version 13 adds a layer of *typed abstraction* to Advanced Search: noun chunks a
 - **Lemma echo** (v13.3.0, extended in v13.4.0) — Bind a slot's lemma with `:N` and refer to it later with `=N`, so that cross-slot identity becomes a single query: `{noun:1} [after] _{=1}` retrieves *study after study*, and `{adv:1} [and] {=1&adv}` retrieves *over and over*.
 - **Chunk-head lemma conditions** (v13.5.0) — `_{[life]}` matches chunks whose root lemma is *life*, so cognate objects come out directly: `[live]{verb} _{[life]}`.
 - **Chunk-head lemma disjunction** (v13.6.0) — the lemma condition accepts alternatives: `_{[part|role]}` matches chunks headed by *part* or *role*, so `[do|play|take]{verb} _{[part|role]}` covers light-verb pairs in one query. `_{-[part|role]}` matches chunks headed by neither.
+- **Stable order of tied collocations** (v13.6.2) — rows of a collocation table that tie on the selected measure are ordered by frequency, then alphabetically. Their order used to depend on the server software and changed when the server moved to Ruby 3.4.
 
 ## v11–v12
 
