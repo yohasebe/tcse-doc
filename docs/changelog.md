@@ -12,6 +12,7 @@ Version 13 adds a layer of *typed abstraction* to Advanced Search: noun chunks a
 - **Chunk-head lemma conditions** (v13.5.0) — `_{[life]}` matches chunks whose root lemma is *life*, so cognate objects come out directly: `[live]{verb} _{[life]}`.
 - **Chunk-head lemma disjunction** (v13.6.0) — the lemma condition accepts alternatives: `_{[part|role]}` matches chunks headed by *part* or *role*, so `[do|play|take]{verb} _{[part|role]}` covers light-verb pairs in one query. `_{-[part|role]}` matches chunks headed by neither.
 - **Stable order of tied collocations** (v13.6.2) — rows of a collocation table that tie on the selected measure are ordered by frequency, then alphabetically. Their order used to depend on the server software and changed when the server moved to Ruby 3.4.
+- **Literal `%` and `_`** (v13.6.3) — a `%` typed in a plain, translation or talk search is matched as that character, and so is a `_` where the search accepts it (translation and talk searches, the construction list; a plain search still refuses `_`). `*` remains the wildcard. Before, `%` matched any characters, so `50%` also found *50* followed by anything.
 
 ## v11–v12
 
