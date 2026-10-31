@@ -10,7 +10,7 @@ Type a word into the box at the top of [the main page](https://yohasebe.com/tcse
 
 Each row in the table is one hit: the talk it comes from, where in the talk it occurs, and the text around it with your word marked. Transcripts are divided into **segments**, roughly one screen of subtitles; by default TCSE extends each segment to sentence boundaries so that a hit is easier to read. Results are paginated 200 at a time.
 
-Results appear in a random order by default, so that the first page is not always drawn from the same corner of the corpus. The order is still fixed: the same query with the same seed returns the same rows in the same sequence. To see a different sample, move the **Random seed** slider and search again, or turn **Randomize Result Order** off for the database order. See [Search in transcripts](searching-for-words/search-for-words-in-ted-transcripts.md).
+Results appear in a random order by default, so that the first page is not always drawn from the same corner of the corpus. The order is still fixed: in the same version, the same query with the same seed returns the same rows in the same sequence. To see a different sample, move the **Random seed** slider and search again, or turn **Randomize Result Order** off for the database order. See [Search in transcripts](searching-for-words/search-for-words-in-ted-transcripts.md).
 
 ## 2. Open a hit
 

@@ -26,4 +26,6 @@ By default, search results are displayed in a randomized order so that you see a
 You can control this behavior in the settings panel:
 
 - **Randomize Result Order** checkbox: Uncheck to display results in their default database order instead.
-- **Random seed** slider: When randomization is enabled, adjust the slider (0.00–1.00) to get a different random ordering. Using the same seed value will always produce the same order, making results reproducible.
+- **Random seed** slider: When randomization is enabled, adjust the slider (0.00–1.00) to get a different random ordering. Using the same seed value produces the same order, making results reproducible.
+
+The random order is computed from the seed and each result's ID. Talks added to the corpus later are placed among the existing results, but do not change the order of the existing results relative to each other. The rows shown for a given seed changed once, in version 13.7.0; a result exported before that version records its version, so it can be told apart.
