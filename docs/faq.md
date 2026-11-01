@@ -10,7 +10,7 @@ TCSE is created by [Yoichiro Hasebe](https://yohasebe.com) (`yohasebe@gmail.com`
 
 ## What version of TCSE is currently running?
 
-The current version is **13.7.0**, containing **6,419 TED Talks**. All transcript data is annotated using [spaCy](https://spacy.io/) 3.8 (`en_core_web_lg`) for part-of-speech tagging, lemmatization, dependency parsing, morphological analysis, and named entity recognition.
+The current version is **13.8.0**, containing **6,419 TED Talks**. All transcript data is annotated using [spaCy](https://spacy.io/) 3.8 (`en_core_web_lg`) for part-of-speech tagging, lemmatization, dependency parsing, morphological analysis, and named entity recognition.
 
 ## How should I cite TCSE?
 

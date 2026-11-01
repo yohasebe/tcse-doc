@@ -49,9 +49,9 @@ JSONの `metadata` とZIP内の `metadata.json` には `export_format_version` �
 | `corpus` | `talks`（コーパスのトーク数）、`updated_at`（コーパスのデータが最後に変わった日時・UTC）、`updating`（データ更新中なら `true`） |
 | `app_version` | サイトに表示されているアプリケーションのバージョン |
 | `conditions` | 実行された検索の条件: `text`、`advanced`、`search`、`if_talk`、`target`、`translation_language`（言語コードまたは `null`）、`video_types`（コードではなく名前）、`allow_en_only`、`randomize`、`seed`、`offset`、`uilang` |
-| `observation` | `total_hits` とその単位 `count_unit`（アドバンスト・サーチでは `match_start`、それ以外は `segment` か `sentence`）、`returned_rows` とその単位 `row_unit`、`page`、`page_size`、`evaluated_at`（UTC） |
+| `observation` | `total_hits` とその単位 `count_unit`（トーク検索では `talk`、それ以外は `segment` か `sentence`）、`returned_rows` とその単位 `row_unit`、`page`、`page_size`、`evaluated_at`（UTC） |
 
-`total_hits` は条件ではなく観測値です。アドバンスト・サーチでは一致の開始トークンの異なり数を数え、行はセグメントまたは文の単位で重複を除くため、2つの数値は単位が違います。
+`total_hits` は条件ではなく観測値です。エクスポートする行と同じものを数えるので、アドバンスト・サーチで1つのセグメントや文に複数回一致したときは1件と数えます。v13.8.0 より前のアドバンスト・サーチのファイルは `count_unit` が `match_start` で、`total_hits` は行ではなく一致の数でした。`match`・`pos`・`lemma`・`dep` の列は、その行の最初の一致を表します。
 
 `export_format_version` のないファイルは、バージョン番号のない旧形式です。旧形式では2つの `context_before_*` の内容が逆になっており、`translation_context_before_*` も同様でした。また、`translation_lang` はJSONではオブジェクト、TSVではRubyのハッシュ表現になっていました。新旧のファイルを併用するときは、バージョンを確認してこれらの項目を揃えるか、結果を再度エクスポートしてください。`context_after_*` と `translation_context_after_*` の内容は変更していません。
 

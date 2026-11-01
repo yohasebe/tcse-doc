@@ -49,9 +49,9 @@ Version **3** adds four metadata objects that say where the file came from. Sear
 | `corpus` | `talks` (number of talks in the corpus), `updated_at` (when the corpus data last changed, UTC), `updating` (`true` while a data update is in progress) |
 | `app_version` | The application version shown on the site |
 | `conditions` | The search as it was executed: `text`, `advanced`, `search`, `if_talk`, `target`, `translation_language` (language code or `null`), `video_types` (names, not codes), `allow_en_only`, `randomize`, `seed`, `offset`, `uilang` |
-| `observation` | `total_hits` and its `count_unit` (`match_start` for Advanced Search, otherwise `segment` or `sentence`), `returned_rows` and its `row_unit`, `page`, `page_size`, `evaluated_at` (UTC) |
+| `observation` | `total_hits` and its `count_unit` (`talk` for a talk search, otherwise `segment` or `sentence`), `returned_rows` and its `row_unit`, `page`, `page_size`, `evaluated_at` (UTC) |
 
-`total_hits` is an observation, not a condition: in Advanced Search it counts distinct matching start tokens, while the rows are deduplicated per segment or sentence, so the two numbers use different units.
+`total_hits` is an observation, not a condition. It counts the same rows that are exported, so in Advanced Search a segment or sentence with several matches counts once. Exports made before v13.8.0 have `count_unit` `match_start` for Advanced Search: their `total_hits` counted matches, not rows. The `match`, `pos`, `lemma` and `dep` columns describe a row's first match.
 
 Exports without `export_format_version` use the legacy, unversioned format. In those files, the two `context_before_*` fields were reversed, as were the two `translation_context_before_*` fields. The `translation_lang` field contained an object in JSON and a Ruby hash representation in TSV. When combining old and new exports, check the version and normalize these fields, or export the results again. The `context_after_*` and `translation_context_after_*` fields have not changed.
 

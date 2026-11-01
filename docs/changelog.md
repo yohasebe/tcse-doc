@@ -14,6 +14,7 @@ Version 13 adds a layer of *typed abstraction* to Advanced Search: noun chunks a
 - **Stable order of tied collocations** (v13.6.2) — rows of a collocation table that tie on the selected measure are ordered by frequency, then alphabetically. Their order used to depend on the server software and changed when the server moved to Ruby 3.4.
 - **Literal `%` and `_`** (v13.6.3) — a `%` typed in a plain, translation or talk search is matched as that character, and so is a `_` where the search accepts it (translation and talk searches, the construction list; a plain search still refuses `_`). `*` remains the wildcard. Before, `%` matched any characters, so `50%` also found *50* followed by anything.
 - **Hash-based random order and faster search** (v13.7.0) — plain searches run several times faster on common words. The random order is now computed from the seed and the result ID: the rows shown for a given seed differ from earlier versions, and adding talks no longer reorders existing results.
+- **Advanced Search counts rows** (v13.8.0) — the total counts segments or sentences, as in a plain search, instead of matches. A row with several matches counts once and shows all of them highlighted, so totals are smaller than before (by up to about a tenth in sentence mode) and the last pages are no longer empty. Exports record `count_unit` as `segment` or `sentence`.
 
 ## v11–v12
 
