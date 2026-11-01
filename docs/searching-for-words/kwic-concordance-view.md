@@ -4,7 +4,7 @@ KWIC (Key Word In Context) is a concordance display format commonly used in corp
 
 ## Switching between List and KWIC views
 
-After performing a search, click the **KWIC** button to switch from the default list view to the KWIC concordance view. Click **List** to switch back.
+After performing a search, click the **KWIC** button to switch from the default list view to the KWIC concordance view. Click **List** to switch back. The view you choose is used for later searches and saved in your browser.
 
 ![KWIC toggle button](images/09.png)
 

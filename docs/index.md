@@ -8,7 +8,7 @@ TCSE is a search engine specializing in exploring transcripts of TED Talks. It h
 
 ## Current Version
 
-- **Version**: 13.8.0
+- **Version**: 13.9.0
 - **Talks**: 6,419 TED Talks
 - **Languages**: 34 translation languages
 - **NLP Engine**: spaCy 3.8 (`en_core_web_lg`)

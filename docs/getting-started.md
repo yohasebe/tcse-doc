@@ -12,6 +12,8 @@ Each row in the table is one hit: the talk it comes from, where in the talk it o
 
 Results appear in a random order by default, so that the first page is not always drawn from the same corner of the corpus. The order is still fixed: in the same version, the same query with the same seed returns the same rows in the same sequence. To see a different sample, move the **Random seed** slider and search again, or turn **Randomize Result Order** off for the database order. See [Search in transcripts](searching-for-words/search-for-words-in-ted-transcripts.md).
 
+The options in the settings panel (translation language, video types, expanded segments, random order and seed, and the playback options) and the choice between the list and KWIC views are saved in your browser when you change them, and come back the next time you open TCSE there. While they differ from the defaults, **Saved settings in use** appears beside the settings toggle. Video types and the random order change which rows a search returns, so check for this label before comparing results; **Reset to defaults** returns every option to its default and forgets the saved settings. A search link (`/q/…`) sets expanded segments and the order itself.
+
 ## 2. Open a hit
 
 The icons on each row lead out of the table:
